@@ -1,0 +1,542 @@
+export interface BannerSlide {
+  id: number;
+  type: 'video' | 'image';
+  src: string;
+  title: string;
+  description: string;
+  callLink: string;
+  waText: string;
+}
+
+export interface TaxiRoute {
+  route: string;
+  category: string;
+  ridesCount: string;
+}
+
+export interface PackageData {
+  id: number;
+  title: string;
+  images: string[];
+  badge?: string;
+  location: string;
+  locationLink: string;
+  duration: string;
+  price: string;
+  detailsLink: string;
+  experienceActivities?: string[];
+  inclusionDetails?: string[];
+}
+
+export interface ServiceFeature {
+  id: number;
+  iconSvg: string;
+  title: string;
+  description: string;
+}
+
+export interface DestinationData {
+  id: number;
+  title: string;
+  image: string;
+  toursCount: string;
+  link: string;
+}
+
+export interface SmartService {
+  id: number;
+  title: string;
+  iconSvg: string;
+  link: string;
+}
+
+export interface BlogData {
+  id: number;
+  title: string;
+  image: string;
+  date: {
+    day: string;
+    month: string;
+  };
+  location: string;
+  locationLink: string;
+  detailsLink: string;
+}
+
+export interface TestimonialData {
+  id: number;
+  title: string;
+  text: string;
+  rating: number; // e.g. 5 or 4.5
+  ratingType: 'circle' | 'trustpilot';
+  authorName: string;
+  authorRole: string;
+  authorImage: string;
+}
+
+export interface CounterData {
+  id: number;
+  number: string;
+  suffix: string;
+  title: string;
+  iconColor: 'yellow' | 'orange' | 'green' | 'default';
+  iconSvg: string;
+}
+
+// Banner Slider Data
+export const bannerSlides: BannerSlide[] = [
+  {
+    id: 1,
+    type: 'video',
+    src: '/media/home2-banner-video.mp4',
+    title: 'Book Taxi Anywhere in Bihar – 24x7',
+    description: 'Fast, Safe & Affordable Taxi Service Across Bihar. Patna Airport Pickup, Railway Station drop, Outstation, One-Way, Round-Trip Taxi. 2000+ Driver Network.',
+    callLink: 'tel:+918102550190',
+    waText: 'I want to book a taxi in Bihar',
+  },
+  {
+    id: 2,
+    type: 'image',
+    src: '/images/banner-img1.jpg',
+    title: 'One-Way & Round-Trip Outstation',
+    description: 'Travel comfortably from Patna to Darbhanga, Gaya, Muzaffarpur, Madhubani or any district in Bihar. Ertiga, Sedan, Innova Crysta & SUV options.',
+    callLink: 'tel:+918102550190',
+    waText: 'I want to book a taxi in Bihar',
+  },
+  {
+    id: 3,
+    type: 'image',
+    src: '/images/banner-img2.jpg',
+    title: 'Patna, Darbhanga & Gaya Airport Drops',
+    description: 'Reliable and timely airport pick & drop service. Pre-book your airport transfer with our professional local drivers at competitive rates.',
+    callLink: 'tel:+918102550190',
+    waText: 'I want to book a taxi in Bihar',
+  },
+];
+
+// Taxi route dropdown search options
+export const taxiRoutes: TaxiRoute[] = [
+  { route: 'Patna to Darbhanga', category: 'Bihar Taxi Route', ridesCount: '2000+' },
+  { route: 'Patna to Muzaffarpur', category: 'Bihar Taxi Route', ridesCount: '1500+' },
+  { route: 'Patna to Gaya', category: 'Bihar Taxi Route', ridesCount: '1200+' },
+  { route: 'Patna to Madhubani', category: 'Bihar Taxi Route', ridesCount: '1000+' },
+  { route: 'Patna to Samastipur', category: 'Bihar Taxi Route', ridesCount: '800+' },
+  { route: 'Darbhanga to Patna', category: 'Bihar Taxi Route', ridesCount: '2000+' },
+  { route: 'Danapur to Patna', category: 'Bihar Taxi Route', ridesCount: '500+' },
+  { route: 'Danapur to Darbhanga', category: 'Bihar Taxi Route', ridesCount: '700+' },
+];
+
+// Car Categories
+export const carTypes = [
+  'Sedan (Dzire/Etios)',
+  'Ertiga (7 Seater)',
+  'Innova Crysta',
+  'SUV (Scorpio/Bolero)',
+  'Tempo Traveller',
+];
+
+// Popular Packages Section
+export const popularPackages: PackageData[] = [
+  {
+    id: 1,
+    title: 'Mystic Mountains Retreat',
+    images: ['/images/tour-package-img1.jpg'],
+    badge: 'Sale on!',
+    location: 'Himachal Pradesh, India',
+    locationLink: 'travel-package-01.html',
+    duration: '05 Days',
+    price: '$399',
+    detailsLink: 'travel-package-details.html',
+    experienceActivities: ['Scuba Diving', 'Zip-lining', 'Rafting', 'Rock Climbing'],
+    inclusionDetails: ['Accommodation', 'Daily Meals', 'Entry Fees', 'Local Transfers'],
+  },
+  {
+    id: 2,
+    title: 'Bali Paradise Tour',
+    images: [
+      '/images/tour-package-img2_1.jpg',
+      '/images/tour-package-img10.jpg',
+      '/images/tour-package-img11.jpg',
+    ],
+    badge: 'Hot Sale!',
+    location: 'Indonesia',
+    locationLink: 'travel-package-01.html',
+    duration: '07 Days',
+    price: '$599',
+    detailsLink: 'travel-package-details.html',
+    experienceActivities: ['Scuba Diving', 'Zip-lining', 'Rafting', 'Rock Climbing'],
+    inclusionDetails: ['Accommodation', 'Daily Meals', 'Entry Fees', 'Local Transfers'],
+  },
+  {
+    id: 3,
+    title: 'Backwaters & Beaches',
+    images: ['/images/tour-package-img2.jpg'],
+    location: 'Kerala, India',
+    locationLink: 'travel-package-01.html',
+    duration: '03 Days/02 Nights',
+    price: '$199',
+    detailsLink: 'travel-package-details.html',
+    experienceActivities: ['Scuba Diving', 'Zip-lining', 'Rafting', 'Rock Climbing'],
+    inclusionDetails: ['Accommodation', 'Daily Meals', 'Entry Fees', 'Local Transfers'],
+  },
+  {
+    id: 4,
+    title: 'Norway Northern Lights',
+    images: ['/images/tour-package-img6.jpg'],
+    badge: 'Hot Sale!',
+    location: 'Norway',
+    locationLink: 'travel-package-01.html',
+    duration: '07 Days',
+    price: '$89',
+    detailsLink: 'travel-package-details.html',
+    experienceActivities: ['Scuba Diving', 'Zip-lining', 'Rafting', 'Rock Climbing'],
+    inclusionDetails: ['Accommodation', 'Daily Meals', 'Entry Fees', 'Local Transfers'],
+  },
+  {
+    id: 5,
+    title: 'Rome, Florence & Venice',
+    images: ['/images/tour-package-img4.jpg'],
+    location: 'Europe',
+    locationLink: 'travel-package-01.html',
+    duration: '03 Days/02 Nights',
+    price: '$149',
+    detailsLink: 'travel-package-details.html',
+    experienceActivities: ['Scuba Diving', 'Zip-lining', 'Rafting', 'Rock Climbing'],
+    inclusionDetails: ['Accommodation', 'Daily Meals', 'Entry Fees', 'Local Transfers'],
+  },
+];
+
+// GoFly Service Features list
+export const serviceFeatures: ServiceFeature[] = [
+  {
+    id: 1,
+    iconSvg: `<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <path d="M27.2713 21.3914L13.5213 10.1414C13.4297 10.0664 13.3187 10.0188 13.2012 10.0044C13.0836 9.98999 12.9644 10.0092 12.8574 10.0599C12.7504 10.1106 12.66 10.1906 12.5968 10.2907C12.5335 10.3908 12.4999 10.5068 12.5 10.6252V29.3752C12.5001 29.5093 12.5433 29.6398 12.6233 29.7474C12.7033 29.8551 12.8157 29.9341 12.9441 29.9729C13.0724 30.0117 13.2099 30.0083 13.3361 29.963C13.4623 29.9177 13.5706 29.833 13.645 29.7214L18.46 22.5002H26.875C27.004 22.5003 27.1298 22.4605 27.2353 22.3862C27.3407 22.312 27.4207 22.207 27.4641 22.0855C27.4641 21.9641 27.5122 21.8322 27.4777 21.7079C27.4432 21.5836 27.3711 21.4731 27.2713 21.3914Z"></path>
+    <path d="M9.75999 19.3751C4.93499 17.5201 2.51999 12.0851 4.37499 7.26008C6.22999 2.43508 11.665 0.020083 16.49 1.87508C21.315 3.73008 23.73 9.16633 21.875 13.9901C21.8203 14.1437 21.8278 14.3126 21.8958 14.4607C21.9639 14.6089 22.0871 14.7246 22.2393 14.7831C22.3915 14.8417 22.5605 14.8384 22.7103 14.7741C22.8601 14.7098 22.9789 14.5895 23.0412 14.4388C25.1437 8.97008 22.4062 2.81008 16.9387 0.707583C11.4712 -1.39492 5.31124 1.34258 3.20874 6.81008C1.10624 12.2788 3.84374 18.4388 9.31124 20.5413C9.46607 20.6008 9.63819 20.5965 9.78981 20.5292C9.94143 20.462 10.0602 20.3373 10.12 20.1826C10.1787 20.0277 10.1738 19.8559 10.1064 19.7047C10.0389 19.5534 9.91442 19.4349 9.75999 19.3751Z"></path>
+  </g>
+</svg>`,
+    title: 'One Click Booking',
+    description: 'You can hassle-free and fast tour & travel package booking by GoFly.',
+  },
+  {
+    id: 2,
+    iconSvg: `<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20.4896 4.14404C19.8384 3.81275 19.0419 4.07233 18.7107 4.72379L8.87091 24.0772C8.53971 24.7285 8.79929 25.5249 9.45066 25.8561C9.63601 25.9507 9.84112 26 10.0492 26C10.5313 26 10.996 25.7356 11.2296 25.2763L21.0694 5.92297C21.4006 5.27161 21.141 4.47523 20.4896 4.14404ZM13.4243 10.5172C13.4243 7.75042 11.1733 5.49943 8.40653 5.49943C5.63991 5.49943 3.38892 7.75042 3.38892 10.5172C3.38892 13.2839 5.63991 15.5349 8.40662 15.5349C11.1734 15.5349 13.4243 13.2839 13.4243 10.5172ZM8.40662 12.8889C7.09894 12.8889 6.03496 11.8249 6.03496 10.5172C6.03496 9.20945 7.09894 8.14548 8.40662 8.14548C9.71438 8.14548 10.7784 9.20937 10.7784 10.5172C10.7783 11.8249 9.71438 12.8889 8.40662 12.8889ZM21.5934 14.4653C18.8266 14.4653 16.5756 16.7163 16.5756 19.483C16.5756 22.2497 18.8265 24.5007 21.5934 24.5007C24.3601 24.5007 26.6111 22.2498 26.6111 19.483C26.6111 16.7162 24.3602 14.4653 21.5934 14.4653ZM21.5934 21.8546C20.2856 21.8546 19.2216 20.7906 19.2216 19.4829C19.2216 18.1752 20.2856 17.1113 21.5934 17.1113C22.901 17.1113 23.965 18.1752 23.965 19.4829C23.965 20.7906 22.9011 21.8546 21.5934 21.8546Z"></path>
+</svg>`,
+    title: 'Deals & Discounts',
+    description: 'Agencies have special discounts on flights, hotels, & packages.',
+  },
+  {
+    id: 3,
+    iconSvg: `<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C21.4662 0 26.7081 5.24194 26.7081 11.7081C26.7081 18.1743 21.4662 23.4163 15 23.4163C8.53375 23.4163 3.29187 18.1743 3.29187 11.7081C3.29187 5.24194 8.53375 0 15 0ZM23.7899 20.886C22.1639 22.4438 20.1246 23.5736 17.8531 24.0947L19.8539 28.7401L22.0141 25.2591L26.0274 26.081L23.7899 20.886ZM12.758 24.2191C10.4637 23.8108 8.38243 22.7867 6.69112 21.324L3.97262 27.1631L8.00831 26.4579L10.0666 30L12.758 24.2191ZM15.1981 7.58544C15.1294 7.40431 14.8707 7.40431 14.8019 7.58544L13.7848 10.2644C13.7706 10.3033 13.7451 10.337 13.7117 10.3613C13.6782 10.3856 13.6383 10.3994 13.597 10.4009L10.7348 10.5404C10.5401 10.5498 10.4604 10.7951 10.6124 10.9172L12.8459 12.7124C12.8785 12.7379 12.9027 12.7726 12.9154 12.8119C12.9282 12.8512 12.929 12.8934 12.9177 12.9332L12.1659 15.6984C12.1147 15.8865 12.3233 16.0381 12.4864 15.9313L14.8839 14.3618C14.9182 14.3387 14.9586 14.3264 15 14.3264C15.0413 14.3264 15.0817 14.3387 15.116 14.3618L17.5136 15.9313C17.6767 16.0381 17.8853 15.8865 17.8341 15.6984L17.0823 12.9333C17.071 12.8935 17.0717 12.8513 17.0845 12.8119C17.0973 12.7726 17.1215 12.738 17.154 12.7125L19.3876 10.9172C19.5395 10.7951 19.4598 10.5499 19.2652 10.5404L16.403 10.4009C16.3617 10.3994 16.3218 10.3856 16.2883 10.3613C16.2549 10.337 16.2294 10.3033 16.2152 10.2645L15.1981 7.58544ZM16.1065 3.43C15.4404 2.93137 14.5596 2.93137 13.8935 3.43C12.1593 4.72812 12.5526 4.58494 10.3897 4.70525C9.55893 4.75144 8.88418 5.31763 8.69443 6.12775C8.20037 8.23687 8.40962 7.87438 6.83012 9.35688C6.22343 9.92631 6.0705 10.7937 6.44587 11.5363C7.42312 13.4695 7.35043 13.0574 7.09337 15.2083C6.99462 16.0344 7.43506 16.7972 8.19987 17.1248C10.1912 17.9776 9.87056 17.7085 11.0562 19.5215C11.5116 20.2179 12.3392 20.5191 13.1357 20.2784C15.2093 19.6517 14.7908 19.6517 16.8644 20.2784C17.6609 20.5191 18.4886 20.2178 18.9439 19.5215C20.1296 17.7086 19.809 17.9776 21.8002 17.1248C22.5651 16.7972 23.0055 16.0344 22.9067 15.2083C22.6497 13.0573 22.577 13.4695 23.5542 11.5363C23.9296 10.7937 23.7766 9.92631 23.17 9.35688C21.5904 7.87444 21.7997 8.23687 21.3057 6.12775C21.1159 5.31763 20.4412 4.7515 19.6104 4.70525C17.4474 4.58494 17.8407 4.72806 16.1065 3.43Z"></path>
+</svg>`,
+    title: 'Local Guidance',
+    description: 'Travel agencies have experienced professionals guidance.',
+  },
+];
+
+// Top Destinations
+export const topDestinations: DestinationData[] = [
+  { id: 1, title: 'Great Wall of China', image: '/images/destination-img1.jpg', toursCount: '12', link: 'destination-details.html' },
+  { id: 2, title: 'Rome, Itlay', image: '/images/destination-img2.jpg', toursCount: '06', link: 'destination-details.html' },
+  { id: 3, title: 'Machu Picchu of Peru', image: '/images/destination-img3.jpg', toursCount: '16', link: 'destination-details.html' },
+  { id: 4, title: 'Great Temple Jordan', image: '/images/destination-img4.jpg', toursCount: '10', link: 'destination-details.html' },
+  { id: 5, title: 'Athens Greece', image: '/images/destination-img5.jpg', toursCount: '15', link: 'destination-details.html' },
+  { id: 6, title: 'Switzerland', image: '/images/destination-img6.jpg', toursCount: '27', link: 'destination-details.html' },
+  { id: 7, title: 'Norway', image: '/images/destination-img7.jpg', toursCount: '08', link: 'destination-details.html' },
+];
+
+// Smart Services in About Section
+export const smartServices: SmartService[] = [
+  {
+    id: 1,
+    title: 'Hotel Booking',
+    link: 'hotel.html',
+    iconSvg: `<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <path d="M13.2422 22.8516H16.7578V30H13.2422V22.8516Z"></path>
+    <path d="M7.09119 30H11.4844V21.0938H18.5156V30H22.9297V0H7.09119V30ZM19.3945 3.51562H21.1523V5.27344H19.3945V3.51562ZM19.3945 7.03125H21.1523V8.78906H19.3945V7.03125ZM19.3945 10.5469H21.1523V12.3047H19.3945V10.5469ZM19.3945 14.0625H21.1523V15.8203H19.3945V14.0625ZM19.3945 17.5781H21.1523V19.3359H19.3945V17.5781ZM15.8789 3.51562H17.6367V5.27344H15.8789V3.51562ZM15.8789 7.03125H17.6367V8.78906H15.8789V7.03125ZM15.8789 10.5469H17.6367V12.3047H15.8789V10.5469ZM15.8789 14.0625H17.6367V15.8203H15.8789V14.0625ZM15.8789 17.5781H17.6367V19.3359H15.8789V17.5781ZM12.3633 3.51562H14.1211V5.27344H12.3633V3.51562ZM12.3633 7.03125H14.1211V8.78906H12.3633V7.03125ZM12.3633 10.5469H14.1211V12.3047H12.3633V10.5469ZM12.3633 14.0625H14.1211V15.8203H12.3633V14.0625ZM12.3633 17.5781H14.1211V19.3359H12.3633V17.5781ZM8.84766 3.51562H10.6055V5.27344H8.84766V3.51562ZM8.84766 7.03125H10.6055V8.78906H8.84766V7.03125ZM8.84766 10.5469H10.6055V12.3047H8.84766V10.5469ZM8.84766 14.0625H10.6055V15.8203H8.84766V14.0625ZM8.84766 17.5781H10.6055V19.3359H8.84766V17.5781ZM24.6467 7.03125H30V30H24.6467V7.03125ZM0 7.03125H5.3318V30H0V7.03125Z"></path>
+  </g>
+</svg>`,
+  },
+  {
+    id: 2,
+    title: 'Top Destinations',
+    link: 'destination-01.html',
+    iconSvg: `<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.8372 27.5581V28.9535C18.8372 29.231 18.9475 29.4972 19.1437 29.6935C19.34 29.8897 19.6062 30 19.8837 30C20.1613 30 20.4275 29.8897 20.6237 29.6935C20.82 29.4972 20.9302 29.231 20.9302 28.9535V27.5581C20.9302 27.2806 20.82 27.0144 20.6237 26.8181C20.4275 26.6219 20.1613 26.5116 19.8837 26.5116C19.6062 26.5116 19.34 26.6219 19.1437 26.8181C18.9475 27.0144 18.8372 27.2806 18.8372 27.5581ZM16.7442 1.04651V8.02326C16.7442 8.30081 16.8544 8.56699 17.0507 8.76325C17.247 8.95951 17.5131 9.06977 17.7907 9.06977C18.0682 9.06977 18.3344 8.95951 18.5307 8.76325C18.7269 8.56699 18.8372 8.30081 18.8372 8.02326V1.04651C18.8372 0.76896 18.7269 0.502775 18.5307 0.306516C18.3344 0.110257 18.0682 0 17.7907 0C17.5131 0 17.247 0.110257 17.0507 0.306516C16.8544 0.502775 16.7442 0.76896 16.7442 1.04651ZM9.06976 27.5581V28.9535C9.06976 29.231 9.18002 29.4972 9.37628 29.6935C9.57254 29.8897 9.83872 30 10.1163 30C10.3938 30 10.66 29.8897 10.8563 29.6935C11.0525 29.4972 11.1628 29.231 11.1628 28.9535V27.5581C11.1628 27.2806 11.0525 27.0144 10.8563 26.8181C10.66 26.6219 10.3938 26.5116 10.1163 26.5116C9.83872 26.5116 9.57254 26.6219 9.37628 26.8181C9.18002 27.0144 9.06976 27.2806 9.06976 27.5581ZM11.1628 1.04651V8.02326C11.1628 8.30081 11.273 8.56699 11.4693 8.76325C11.6656 8.95951 11.9317 9.06977 12.2093 9.06977C12.4869 9.06977 12.753 8.95951 12.9493 8.76325C13.1456 8.56699 13.2558 8.30081 13.2558 8.02326V1.04651C13.2558 0.76896 13.1456 0.502775 12.9493 0.306516C12.753 0.110257 12.4869 0 12.2093 0C11.9317 0 11.6656 0.110257 11.4693 0.306516C11.273 0.502775 11.1628 0.76896 11.1628 1.04651Z"></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.814 2.09302H19.1861C19.4636 2.09302 19.7298 1.98277 19.9261 1.78651C20.1223 1.59025 20.2326 1.32406 20.2326 1.04651C20.2326 0.768959 20.1223 0.502775 19.9261 0.306516C19.7298 0.110257 19.4636 0 19.1861 0H10.814C10.5364 0 10.2702 0.110257 10.074 0.306516C9.87772 0.502775 9.76747 0.768959 9.76747 1.04651C9.76747 1.32406 9.87772 1.59025 10.074 1.78651C10.2702 1.98277 10.5364 2.09302 10.814 2.09302ZM24.4186 10.814C24.4186 9.79626 24.0144 8.82025 23.2947 8.10064C22.5751 7.38102 21.5991 6.97674 20.5814 6.97674H9.41863C8.40094 6.97674 7.42493 7.38102 6.70531 8.10064C5.9857 8.82025 5.58142 9.79626 5.58142 10.814V24.7674C5.58142 25.7851 5.9857 26.7611 6.70531 27.4808C7.42493 28.2004 8.40094 28.6047 9.41863 28.6047H20.5814C21.5991 28.6047 22.5751 28.2004 23.2947 27.4808C24.0144 26.7611 24.4186 25.7851 24.4186 24.7674V10.814ZM13.9535 12.2093V23.3721C13.9535 23.6496 14.0638 23.9158 14.26 24.1121C14.4563 24.3083 14.7225 24.4186 15 24.4186C15.2776 24.4186 15.5438 24.3083 15.74 24.1121C15.9363 23.9158 16.0465 23.6496 16.0465 23.3721V12.2093C16.0465 11.9317 15.9363 11.6656 15.74 11.4693C15.5438 11.273 15.2776 11.1628 15 11.1628C14.7225 11.1628 14.4563 11.273 14.26 11.4693C14.0638 11.6656 13.9535 11.9317 13.9535 12.2093ZM9.76747 12.2093V23.3721C9.76747 23.6496 9.87772 23.9158 10.074 24.1121C10.2702 24.3083 10.5364 24.4186 10.814 24.4186C11.0915 24.4186 11.3577 24.3083 11.554 24.1121C11.7502 23.9158 11.8605 23.6496 11.8605 23.3721V12.2093C11.8605 11.9317 11.7502 11.6656 11.554 11.4693C11.3577 11.273 11.0915 11.1628 10.814 11.1628C10.5364 11.1628 10.2702 11.273 10.074 11.4693C9.87772 11.6656 9.76747 11.9317 9.76747 12.2093ZM18.1396 12.2093V23.3721C18.1396 23.6496 18.2498 23.9158 18.4461 24.1121C18.6423 24.3083 18.9085 24.4186 19.1861 24.4186C19.4636 24.4186 19.7298 24.3083 19.9261 24.1121C20.1223 23.9158 20.2326 23.6496 20.2326 23.3721V12.2093C20.2326 11.9317 20.1223 11.6656 19.9261 11.4693C19.7298 11.273 19.4636 11.1628 19.1861 11.1628C18.9085 11.1628 18.6423 11.273 18.4461 11.4693C18.2498 11.6656 18.1396 11.9317 18.1396 12.2093Z"></path>
+  </g>
+</svg>`,
+  },
+  {
+    id: 3,
+    title: 'Visa Processing',
+    link: 'visa.html',
+    iconSvg: `<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <path d="M21.1526 1.54105C21.1497 1.2982 21.0897 1.05944 20.9775 0.844035C20.8653 0.628628 20.704 0.442596 20.5068 0.300939C20.305 0.152721 20.0704 0.0555622 19.8229 0.017769C19.5755 -0.0200242 19.3226 0.00267288 19.0858 0.0839196L8.99438 3.6079H21.1526V1.54105ZM15.4688 18.8509C15.7168 18.8509 16.4041 17.6108 16.5022 15.2339H14.4354C14.5335 17.6108 15.2208 18.8509 15.4688 18.8509ZM15.4688 10.5835C15.2208 10.5835 14.5335 11.8236 14.4354 14.2005H16.5022C16.4041 11.8236 15.7168 10.5835 15.4688 10.5835ZM14.0427 18.5926C13.6362 17.5186 13.4194 16.3821 13.4019 15.2339H11.3713C11.4665 15.9847 11.7659 16.6949 12.237 17.2871C12.708 17.8793 13.3326 18.3309 14.0427 18.5926ZM14.0427 10.8419C13.3326 11.1036 12.708 11.5551 12.237 12.1474C11.7659 12.7396 11.4665 13.4498 11.3713 14.2005H13.4019C13.4194 13.0523 13.6362 11.9159 14.0427 10.8419Z"></path>
+    <path d="M5.65125 6.1915V28.9269C5.65125 29.338 5.81456 29.7323 6.10527 30.023C6.39598 30.3137 6.79026 30.477 7.20138 30.477H23.7362C24.1473 30.477 24.5416 30.3137 24.8323 30.023C25.123 29.7323 25.2863 29.338 25.2863 28.9269V6.1915C25.2863 5.78037 25.123 5.38609 24.8323 5.09538C24.5416 4.80468 24.1473 4.64136 23.7362 4.64136H7.20138C6.79026 4.64136 6.39598 4.80468 6.10527 5.09538C5.81456 5.38609 5.65125 5.78037 5.65125 6.1915ZM19.6025 25.5682H11.3351C11.198 25.5682 11.0666 25.5138 10.9697 25.4169C10.8728 25.32 10.8184 25.1886 10.8184 25.0515C10.8184 24.9145 10.8728 24.7831 10.9697 24.6862C11.0666 24.5893 11.198 24.5348 11.3351 24.5348H19.6025C19.7395 24.5348 19.871 24.5893 19.9679 24.6862C20.0648 24.7831 20.1192 24.9145 20.1192 25.0515C20.1192 25.1886 20.0648 25.32 19.9679 25.4169C19.871 25.5138 19.7395 25.5682 19.6025 25.5682ZM12.8852 23.5014C12.8852 23.3643 12.9397 23.2329 13.0366 23.136C13.1335 23.0391 13.2649 22.9847 13.4019 22.9847H17.5356C17.6727 22.9847 17.8041 23.0391 17.901 23.136C17.9979 23.2329 18.0524 23.3643 18.0524 23.5014C18.0524 23.6384 17.9979 23.7699 17.901 23.8668C17.8041 23.9637 17.6727 24.0181 17.5356 24.0181H13.4019C13.2649 24.0181 13.1335 23.9637 13.0366 23.8668C12.9397 23.7699 12.8852 23.6384 12.8852 23.5014ZM15.4688 9.55013C16.4908 9.55013 17.4898 9.85318 18.3395 10.421C19.1892 10.9887 19.8515 11.7957 20.2426 12.7399C20.6337 13.6841 20.736 14.723 20.5366 15.7253C20.3373 16.7276 19.8451 17.6483 19.1225 18.371C18.3999 19.0936 17.4792 19.5857 16.4769 19.7851C15.4745 19.9845 14.4356 19.8822 13.4914 19.4911C12.5472 19.1 11.7403 18.4377 11.1725 17.588C10.6047 16.7382 10.3017 15.7392 10.3017 14.7173C10.3017 13.3469 10.8461 12.0326 11.8151 11.0635C12.7841 10.0945 14.0984 9.55013 15.4688 9.55013Z"></path>
+    <path d="M19.5662 14.2004C19.471 13.4497 19.1716 12.7395 18.7005 12.1473C18.2295 11.555 17.6049 11.1035 16.8948 10.8418C17.3013 11.9158 17.5181 13.0522 17.5356 14.2004H19.5662ZM19.5662 15.2339H17.5356C17.5181 16.3821 17.5181 17.5185 16.8948 18.5925C17.6049 18.3308 18.2295 17.8792 18.7005 17.287C19.1716 16.6948 19.471 15.9846 19.5662 15.2339Z"></path>
+  </g>
+</svg>`,
+  },
+  {
+    id: 4,
+    title: 'Tour Experiences',
+    link: 'experience-grid.html',
+    iconSvg: `<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M15 27.5C4.70625 27.5 2.5 25.2938 2.5 15C2.5 4.70625 4.70625 2.5 15 2.5C25.2938 2.5 27.5 4.70625 27.5 15C27.5 25.2938 25.2938 27.5 15 27.5ZM18.5169 9.28965C18.4254 9.12316 18.29 8.98488 18.1256 8.88977C17.9611 8.79467 17.7737 8.74636 17.5838 8.75009C17.3938 8.75382 17.2085 8.80943 17.0479 8.91091C16.8873 9.0124 16.7575 9.15588 16.6726 9.32583L12.352 17.967L10.444 14.498C10.3542 14.3346 10.222 14.1983 10.0615 14.1034C9.90093 14.0084 9.71782 13.9583 9.5313 13.9584H7.7084C7.13311 13.9584 6.66675 14.4247 6.66675 15C6.66675 15.5753 7.13311 16.0417 7.7084 16.0417H8.91543L11.4832 20.7103C11.5748 20.8768 11.7101 21.015 11.8746 21.1101C12.0391 21.2052 12.2264 21.2535 12.4164 21.2498C12.6063 21.2461 12.7916 21.1905 12.9522 21.089C13.1128 20.9876 13.2427 20.8441 13.3276 20.6742L17.6482 12.0331L19.5561 15.502C19.646 15.6654 19.7781 15.8018 19.9386 15.8967C20.0992 15.9916 20.2823 16.0417 20.4688 16.0417H22.2917C22.867 16.0417 23.3334 15.5753 23.3334 15.0001C23.3334 14.4248 22.867 13.9584 22.2917 13.9584H21.0847L18.5169 9.28965Z"></path>
+</svg>`,
+  },
+  {
+    id: 5,
+    title: 'Customize Package',
+    link: 'contact.html',
+    iconSvg: `<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.3333 3H4.33333C3.97971 3 3.64057 3.14048 3.39052 3.39052C3.14048 3.64057 3 3.97971 3 4.33333V12.3333C3 12.687 3.14048 13.0261 3.39052 13.2761C3.64057 13.5262 3.97971 13.6667 4.33333 13.6667H12.3333C12.687 13.6667 13.0261 13.5262 13.2761 13.2761C13.5262 13.0261 13.6667 12.687 13.6667 12.3333V4.33333C13.6667 3.97971 13.5262 3.64057 13.2761 3.39052C13.0261 3.14048 12.687 3 12.3333 3ZM25.6667 3H17.6667C17.313 3 16.9739 3.14048 16.7239 3.39052C16.4738 3.64057 16.3333 3.97971 16.3333 4.33333V12.3333C16.3333 12.687 16.4738 13.0261 16.7239 13.2761C16.9739 13.5262 17.313 13.6667 17.6667 13.6667H25.6667C26.0203 13.6667 26.3594 13.5262 26.6095 13.2761C26.8595 13.0261 27 12.687 27 12.3333V4.33333C27 3.97971 26.8595 3.64057 26.6095 3.39052C26.3594 3.14048 26.0203 3 25.6667 3ZM12.3333 16.3333H4.33333C3.97971 16.3333 3.64057 16.4738 3.39052 16.7239C3.14048 16.9739 3 17.313 3 17.6667V25.6667C3 26.0203 3.14048 26.3594 3.39052 26.6095C3.64057 26.8595 3.97971 27 4.33333 27H12.3333C12.687 27 13.0261 26.8595 13.2761 26.6095C13.5262 26.3594 13.6667 26.0203 13.6667 25.6667V17.6667C13.6667 17.313 13.5262 16.9739 13.2761 16.7239C13.0261 16.4738 12.687 16.3333 12.3333 16.3333ZM23 17.6667H20.3333V20.3333H17.6667V23H20.3333V25.6667H23V23H25.6667V20.3333H23V17.6667Z"></path>
+</svg>`,
+  },
+  {
+    id: 6,
+    title: 'Adventure Travel',
+    link: 'experience-grid.html',
+    iconSvg: `<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0.792587 24.0159V26.676C0.792587 26.8417 0.858434 27.0007 0.975641 27.1179C1.09285 27.2351 1.25182 27.301 1.41757 27.301H3.88027C4.04603 27.301 4.205 27.2351 4.3222 27.1179C4.43941 27.0007 4.50526 26.8417 4.50526 26.676V24.6071H2.59306C1.94518 24.6073 1.31424 24.4002 0.792587 24.0159ZM25.4945 24.6071V26.676C25.4945 26.7581 25.5107 26.8394 25.5421 26.9152C25.5735 26.9911 25.6196 27.06 25.6777 27.118C25.7357 27.176 25.8046 27.2221 25.8805 27.2535C25.9563 27.2849 26.0376 27.301 26.1197 27.301H28.5824C28.7482 27.301 28.9072 27.2351 29.0244 27.1179C29.1416 27.0007 29.2074 26.8417 29.2074 26.676V24.0157C28.6858 24.4 28.0548 24.6072 27.4069 24.6071H25.4945ZM0.223696 16.0197V21.5564C0.223666 21.8676 0.284923 22.1757 0.40397 22.4631C0.523017 22.7506 0.697521 23.0118 0.917518 23.2318C1.13752 23.4518 1.3987 23.6263 1.68615 23.7454C1.9736 23.8645 2.28169 23.9258 2.59283 23.9258H27.4069C28.0353 23.9258 28.6379 23.6762 29.0822 23.2319C29.5265 22.7876 29.7761 22.185 29.7761 21.5566V16.0199C29.7762 15.0064 29.5207 14.0092 29.0335 13.1205L27.7744 10.8245H29.5462C30.1512 10.8245 30.1512 8.62453 29.5462 8.62453H26.5678L24.0894 4.10519C23.8802 3.72358 23.5738 3.40405 23.2013 3.17896C22.8288 2.95387 22.4034 2.83122 21.9683 2.82343L14.9999 2.69897L8.0317 2.82343C7.146 2.83932 6.33638 3.32828 5.91057 4.10519L3.43197 8.62453H0.453751C-0.15125 8.62453 -0.15125 10.8247 0.453751 10.8247H2.2256L0.966548 13.1207C0.479329 14.0093 0.223694 15.0063 0.223696 16.0197ZM19.2946 21.9539C19.2946 22.0732 19.2472 22.1877 19.1628 22.2721C19.0784 22.3565 18.9639 22.404 18.8445 22.404H11.1555C11.0361 22.404 10.9216 22.3565 10.8372 22.2721C10.7528 22.1877 10.7054 22.0732 10.7054 21.9539V20.8129C10.7054 20.5644 10.9068 20.363 11.1555 20.363H18.8445C19.0932 20.363 19.2946 20.5644 19.2946 20.8129V21.9539ZM26.9866 16.034C26.8256 16.1094 26.6519 16.1536 26.4745 16.1643L22.8933 16.3717C22.7326 16.3811 22.5737 16.3343 22.4438 16.2392C22.3139 16.1442 22.2211 16.0069 22.1815 15.8509C22.1418 15.6949 22.1577 15.53 22.2264 15.3844C22.2952 15.2389 22.4124 15.1218 22.5581 15.0533L25.8025 13.5231C26.1346 13.372 26.5128 13.3576 26.8554 13.4832C27.198 13.6089 27.4773 13.8643 27.633 14.1943C27.7886 14.5244 27.8081 14.9024 27.6871 15.2466C27.5661 15.5909 27.3145 15.8739 26.9866 16.034ZM6.90618 4.65115C7.01922 4.44495 7.18474 4.27229 7.38598 4.15065C7.58722 4.02901 7.81703 3.96272 8.05214 3.95848L14.9999 3.83471L21.9481 3.95871C22.1831 3.96294 22.4129 4.02921 22.6141 4.1508C22.8153 4.2724 22.9808 4.44501 23.0938 4.65115L26.6611 11.1558C26.8201 11.4456 26.6103 11.7996 26.2798 11.7996H3.72016C3.38973 11.7996 3.18011 11.4456 3.33886 11.1558L6.90618 4.65115ZM2.21993 14.6982C2.23311 14.4715 2.30172 14.2515 2.41973 14.0574C2.53773 13.8634 2.70154 13.7013 2.89677 13.5854C3.09201 13.4694 3.31272 13.4031 3.53954 13.3923C3.76637 13.3815 3.99238 13.4265 4.19776 13.5234L7.44215 15.0533C7.58771 15.1219 7.70486 15.239 7.77349 15.3846C7.84211 15.5301 7.85793 15.695 7.81822 15.8509C7.77851 16.0068 7.68576 16.1441 7.55588 16.2391C7.42601 16.334 7.26712 16.3809 7.10649 16.3714L3.52531 16.1641C3.34333 16.1536 3.16521 16.1073 3.00112 16.0279C2.83703 15.9486 2.69018 15.8377 2.56896 15.7015C2.44774 15.5654 2.35452 15.4067 2.29464 15.2346C2.23475 15.0624 2.20936 14.8801 2.21993 14.6982Z"></path>
+  <path d="M13.2124 4.34912H16.7877V5.24913H13.2124V4.34912Z"></path>
+</svg>`,
+  },
+];
+
+// One Day Trip Section packages
+export const oneDayTrips: PackageData[] = [
+  {
+    id: 1,
+    title: 'Hanoi Kiem Lake',
+    images: ['/images/tour-package-img5.jpg'],
+    location: 'Vietnam',
+    locationLink: 'travel-package-01.html',
+    duration: '05 Days',
+    price: '$150',
+    detailsLink: 'travel-package-details.html',
+    experienceActivities: ['Scuba Diving', 'Zip-lining', 'Rafting', 'Rock Climbing'],
+    inclusionDetails: ['Accommodation', 'Daily Meals', 'Entry Fees', 'Local Transfers'],
+  },
+  {
+    id: 2,
+    title: 'Newlands Safari Forest',
+    images: ['/images/tour-package-img7.jpg'],
+    badge: 'Sale on!',
+    location: 'South Africa',
+    locationLink: 'travel-package-01.html',
+    duration: '07 Days',
+    price: '$750',
+    detailsLink: 'travel-package-details.html',
+    experienceActivities: ['Scuba Diving', 'Zip-lining', 'Rafting', 'Rock Climbing'],
+    inclusionDetails: ['Accommodation', 'Daily Meals', 'Entry Fees', 'Local Transfers'],
+  },
+  {
+    id: 3,
+    title: 'Ho Chi Minh City (Saigon)',
+    images: ['/images/tour-package-img8.jpg'],
+    badge: 'Hot Sale!',
+    location: 'Vietnam',
+    locationLink: 'travel-package-01.html',
+    duration: '03 Days/02 Nights',
+    price: '$299',
+    detailsLink: 'travel-package-details.html',
+    experienceActivities: ['Scuba Diving', 'Zip-lining', 'Rafting', 'Rock Climbing'],
+    inclusionDetails: ['Accommodation', 'Daily Meals', 'Entry Fees', 'Local Transfers'],
+  },
+];
+
+// Offer Packages Section
+export const specialOffers: PackageData[] = [
+  {
+    id: 1,
+    title: 'Japan Cherry Blossom',
+    images: ['/images/tour-package-img9.jpg'],
+    badge: 'Sale on!',
+    location: 'Kyoto, Japan',
+    locationLink: 'travel-package-01.html',
+    duration: '05 Days',
+    price: '$399',
+    detailsLink: 'travel-package-details.html',
+    experienceActivities: ['Scuba Diving', 'Zip-lining', 'Rafting', 'Rock Climbing'],
+    inclusionDetails: ['Accommodation', 'Daily Meals', 'Entry Fees', 'Local Transfers'],
+  },
+  {
+    id: 2,
+    title: 'Abu Dhabi Luxury Escape',
+    images: ['/images/tour-package-img12.jpg'],
+    badge: 'Hot Sale!',
+    location: 'Abu Dhabi, UAE',
+    locationLink: 'travel-package-01.html',
+    duration: '07 Days',
+    price: '$599',
+    detailsLink: 'travel-package-details.html',
+    experienceActivities: ['Scuba Diving', 'Zip-lining', 'Rafting', 'Rock Climbing'],
+    inclusionDetails: ['Accommodation', 'Daily Meals', 'Entry Fees', 'Local Transfers'],
+  },
+  {
+    id: 3,
+    title: 'Morocco Desert & City Adventure',
+    images: ['/images/tour-package-img13.jpg'],
+    location: 'Morocco',
+    locationLink: 'travel-package-01.html',
+    duration: '03 Days/02 Nights',
+    price: '$199',
+    detailsLink: 'travel-package-details.html',
+    experienceActivities: ['Scuba Diving', 'Zip-lining', 'Rafting', 'Rock Climbing'],
+    inclusionDetails: ['Accommodation', 'Daily Meals', 'Entry Fees', 'Local Transfers'],
+  },
+];
+
+// Partner images list
+export const partnerImages = [
+  '/images/partner-01.png',
+  '/images/partner-02.png',
+  '/images/partner-03.png',
+  '/images/partner-04.png',
+  '/images/partner-05.png',
+  '/images/partner-06.png',
+];
+
+// Blog Section Data
+export const blogPosts: BlogData[] = [
+  {
+    id: 1,
+    title: 'Nature, Culture & Thrill: Travel Stories That Inspire.',
+    image: '/images/blog-img1.jpg',
+    date: { day: '02', month: 'Jan.' },
+    location: 'Tokyeo, Japan',
+    locationLink: 'travel-inspiration-01.html',
+    detailsLink: 'travel-inspiration-details.html',
+  },
+  {
+    id: 2,
+    title: 'Top 10 Beaches to Visit This Summer Season.',
+    image: '/images/blog-img2.jpg',
+    date: { day: '04', month: 'Feb.' },
+    location: 'Dubai, Middle East',
+    locationLink: 'travel-inspiration-01.html',
+    detailsLink: 'travel-inspiration-details.html',
+  },
+  {
+    id: 3,
+    title: 'Dream. Explore. Discover. Where Will You Go Next?',
+    image: '/images/blog-img3.jpg',
+    date: { day: '07', month: 'Feb.' },
+    location: 'Tokyeo, Japan',
+    locationLink: 'travel-inspiration-01.html',
+    detailsLink: 'travel-inspiration-details.html',
+  },
+];
+
+// Testimonials Data
+export const testimonials: TestimonialData[] = [
+  {
+    id: 1,
+    title: 'Excellent Tourist Place!',
+    text: 'Our honeymoon package to the Maldives was beyond amazing! The travel agency took care of every detail.',
+    rating: 5,
+    ratingType: 'circle',
+    authorName: 'Robert Kcarery',
+    authorRole: 'GoFly Traveler',
+    authorImage: '/images/testimonial-author-img1.png',
+  },
+  {
+    id: 2,
+    title: 'Average Experience',
+    text: 'The Thailand tour was flawless! Great hotels, smooth transfers — truly a stress-free and enjoyable experience.',
+    rating: 4.5,
+    ratingType: 'circle',
+    authorName: 'James Bonde',
+    authorRole: 'GoFly Traveler',
+    authorImage: '/images/testimonial-author-img3.png',
+  },
+  {
+    id: 3,
+    title: 'Great Experience!',
+    text: 'Thanks to their expert planning, our Dubai vacation was seamless. Every detail was handled with care.',
+    rating: 5,
+    ratingType: 'trustpilot',
+    authorName: 'Selina Henry',
+    authorRole: 'GoFly Traveler',
+    authorImage: '/images/testimonial-author-img2.png',
+  },
+  {
+    id: 4,
+    title: 'Great Visitors Venue!',
+    text: 'We had an incredible Europe tour! The itinerary, bookings, and support were all professionally managed.',
+    rating: 5,
+    ratingType: 'circle',
+    authorName: 'Michael D Linda',
+    authorRole: 'GoFly Traveler',
+    authorImage: '/images/testimonial-author-img4.png',
+  },
+  {
+    id: 5,
+    title: 'Fantastic Service!',
+    text: 'Our trip to Bali was unforgettable! Everything was perfectly organized by the agency from start to finish.',
+    rating: 5,
+    ratingType: 'trustpilot',
+    authorName: 'Amber Lashley',
+    authorRole: 'GoFly Traveler',
+    authorImage: '/images/testimonial-author-img5.png',
+  },
+];
+
+// Counter Section Data
+export const counters: CounterData[] = [
+  {
+    id: 1,
+    number: '26',
+    suffix: 'K+',
+    title: 'Tour Completed',
+    iconColor: 'yellow',
+    iconSvg: `<svg width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M39.5961 15.81C38.1214 17.2519 40.2368 20.3608 36.9514 22.3862C35.0583 23.5533 38.0077 25.8843 36.9514 28.6109C36.7987 29.0049 36.7675 29.4023 36.987 29.8303C34.3992 31.822 31.1578 33.0065 27.6398 33.0065C26.7047 33.0065 25.7892 32.9228 24.9003 32.7625L24.5591 33.9508C25.5749 34.1416 26.6063 34.2374 27.6398 34.237C36.7906 34.237 44.209 26.8186 44.209 17.6679C44.209 8.51713 36.7906 1.09863 27.6398 1.09863C24.0648 1.09863 20.6088 2.24297 17.7454 4.37818C19.8919 7.68524 19.849 12.0313 17.6364 15.2956C18.4686 16.7537 19.665 16.797 20.1282 16.9774C21.8931 17.6654 23.2203 21.7429 24.3251 23.0528C25.9039 22.1413 27.6183 21.8503 29.3902 22.4059C29.0978 20.9689 27.4158 19.3471 26.9044 18.8961C25.0823 17.2898 25.8475 16.5076 27.2823 16.1104C28.9332 15.6532 31.4705 15.7057 31.9733 15.5987C33.1508 15.3482 33.4901 14.5201 32.5894 13.7393C31.5322 12.823 29.6808 11.8148 29.2499 10.9945C28.6541 9.8601 29.0869 9.52163 29.8556 9.28389C31.4176 8.80084 34.3657 8.73281 32.891 3.25178C38.0294 5.12385 41.8141 9.62587 42.7515 15.026C41.0332 15.0163 40.1027 15.3148 39.5961 15.81ZM6.48202 37.3493L1.40625 33.2101L3.25916 31.9816L8.22243 33.7703L25.2854 23.919C28.1145 22.2856 33.7222 24.5118 28.3539 27.6113L24.4524 29.8638L20.8244 42.4993L18.3959 43.9014L18.5658 33.213C18.5658 33.213 8.38195 38.8263 6.48202 37.3493ZM9.44719 1.09863C14.2276 1.09863 18.1034 4.97426 18.1034 9.7548C18.1034 14.5354 14.2277 18.411 9.44719 18.411C4.66673 18.411 0.791016 14.5353 0.791016 9.7548C0.791016 4.97435 4.66673 1.09863 9.44719 1.09863ZM4.16821 14.9772C4.53076 12.3859 6.75615 10.3914 9.44728 10.3914C12.1385 10.3914 14.3635 12.3858 14.7261 14.9772C16.0532 13.6358 16.8728 11.7911 16.8728 9.7548C16.8728 5.65356 13.5483 2.3291 9.4471 2.3291C5.34595 2.3291 2.02148 5.65356 2.02148 9.7548C2.02148 11.7911 2.84115 13.6357 4.16821 14.9772ZM6.98344 6.5076C6.98344 7.86841 8.08655 8.97152 9.44736 8.97152C10.8082 8.97152 11.9113 7.86841 11.9113 6.5076C11.9113 5.14714 10.8082 4.04402 9.44736 4.04402C8.08655 4.04411 6.98344 5.14714 6.98344 6.5076ZM8.08436 26.0411L10.5127 24.6391L18.2438 26.5637L13.7191 29.176L8.08436 26.0411ZM13.7464 24.1761C13.0102 22.6071 12.547 20.924 12.3768 19.1992C11.9812 19.3217 11.5781 19.4192 11.1702 19.4911C11.3316 20.9699 11.6927 22.4201 12.2436 23.8019L13.7464 24.1761Z"></path>
+</svg>`,
+  },
+  {
+    id: 2,
+    number: '12',
+    suffix: '+',
+    title: 'Travel Experience',
+    iconColor: 'orange',
+    iconSvg: `<svg width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+  <path d="M35.1512 26.1785V22.8616H35.6609C37.2742 22.8616 38.5842 21.5516 38.5842 19.9449C38.5842 18.3317 37.2742 17.0216 35.6609 17.0216H30.3436V11.9947H37.0613C37.4227 11.9947 37.7066 11.7108 37.7066 11.3495C37.7069 11.2646 37.6904 11.1806 37.6581 11.1022C37.6257 11.0237 37.5782 10.9525 37.5182 10.8925C37.4583 10.8325 37.387 10.785 37.3086 10.7527C37.2302 10.7204 37.1461 10.7039 37.0613 10.7042H31.957C31.6214 5.76761 27.5108 1.85059 22.4839 1.85059C18.296 1.85059 14.6436 4.53503 13.4045 8.5359C13.0367 9.7233 13.5464 10.9945 14.6435 11.6269V17.0216H9.32619C8.94205 17.0208 8.56153 17.0958 8.20647 17.2424C7.85141 17.389 7.5288 17.6043 7.25718 17.8759C6.98555 18.1475 6.77026 18.4701 6.62367 18.8252C6.47707 19.1802 6.40206 19.5608 6.40294 19.9449C6.40294 21.5517 7.71287 22.8616 9.32619 22.8616H9.83604V26.1785C6.40303 27.8885 4.20251 31.4055 4.20251 35.2708V39.6008C4.20251 41.5561 5.79641 43.15 7.75171 43.15H37.2485C39.2038 43.15 40.7977 41.5561 40.7977 39.6008V35.2708C40.7976 31.4055 38.5907 27.8885 35.1512 26.1785ZM15.9341 11.9947H29.0531V17.2669C29.0531 19.0543 27.1688 21.5516 23.8778 24.12C23.4832 24.4304 22.9957 24.5991 22.4936 24.5991C21.9915 24.5991 21.504 24.4304 21.1094 24.12C20.335 23.5198 19.3607 22.6938 18.4572 21.7646L18.4507 21.7582C17.102 20.3643 15.9341 18.7382 15.9341 17.2669V11.9947ZM25.0393 24.8492V26.8109C25.0393 28.2177 23.897 29.3598 22.4968 29.3598C21.0577 29.3598 19.9479 28.1918 19.9479 26.8109V24.8428C21.7482 26.2882 23.3744 26.185 25.0393 24.8492ZM11.7461 41.8594H7.75163C6.50622 41.8594 5.4931 40.8463 5.4931 39.6008V35.2708C5.4931 31.5152 7.90007 27.9854 11.7461 26.798V41.8594ZM31.9505 41.8594H13.0367V26.5076C13.4691 26.4431 13.9143 26.3979 14.366 26.3979H18.6573V26.8109C18.6573 28.9017 20.3415 30.6505 22.4969 30.6505C24.6134 30.6505 26.3299 28.9275 26.3299 26.8109V26.3979H30.6276C31.0794 26.3979 31.5181 26.4431 31.9505 26.5076V41.8594ZM39.507 39.6008C39.507 40.8463 38.4938 41.8594 37.2484 41.8594H33.2411V26.798C37.0484 27.9725 39.507 31.4636 39.507 35.2708V39.6008Z"></path>
+</svg>`,
+  },
+  {
+    id: 3,
+    number: '20',
+    suffix: '+',
+    title: 'Happy Traveler',
+    iconColor: 'default',
+    iconSvg: `<svg width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <path d="M38.0333 16.4395C38.3412 16.4394 38.6319 16.2974 38.8214 16.0547C39.0107 15.8121 39.0776 15.4959 39.003 15.1973L37.5909 9.54883C37.4796 9.10368 37.08 8.79105 36.6212 8.79102H8.37899C7.92011 8.79102 7.52055 9.10366 7.40926 9.54883L5.99715 15.1973C5.92256 15.4959 5.98936 15.812 6.17879 16.0547C6.3683 16.2974 6.65894 16.4395 6.96688 16.4395H38.0333ZM9.15926 10.791H35.8399L36.752 14.4395H8.24715L9.15926 10.791Z"></path>
+    <g>
+      <path d="M36.6209 10.791C36.9289 10.791 37.2195 10.649 37.409 10.4062C37.5984 10.1636 37.6652 9.84747 37.5907 9.54883V9.54688C37.5904 9.5458 37.5902 9.5441 37.5897 9.54199C37.5886 9.53763 37.5869 9.53098 37.5848 9.52246C37.5805 9.50533 37.5735 9.48005 37.5653 9.44727C37.5488 9.38137 37.525 9.28445 37.495 9.16406L36.6024 5.59375V5.59277C36.4298 4.90407 36.069 4.27658 35.5604 3.78125C35.0518 3.28608 34.4154 2.94228 33.7225 2.78809L23.9491 0.616211C23.5687 0.531687 23.2606 0.463331 23.0477 0.416016C22.9414 0.3924 22.8586 0.373787 22.8026 0.361328C22.7745 0.355098 22.7525 0.349873 22.7381 0.34668C22.7313 0.345176 22.7261 0.344541 22.7225 0.34375C22.721 0.343414 22.7195 0.342971 22.7186 0.342773H22.7166C22.5738 0.311048 22.4258 0.310103 22.283 0.341797V0.342773H22.2811C22.2802 0.342971 22.2787 0.343411 22.2772 0.34375C22.2736 0.34454 22.2683 0.345175 22.2616 0.34668C22.2472 0.349873 22.2251 0.355098 22.1971 0.361328C22.141 0.373787 22.0583 0.392397 21.952 0.416016C21.739 0.46333 21.431 0.531686 21.0506 0.616211L11.2772 2.78809C10.5843 2.94228 9.94787 3.28608 9.43929 3.78125C8.93063 4.27658 8.56983 4.90407 8.3973 5.59277V5.59375L7.50472 9.16406C7.47463 9.28445 7.45088 9.38137 7.43441 9.44727C7.42621 9.48005 7.41916 9.50533 7.41487 9.52246C7.41274 9.53098 7.41108 9.53763 7.40999 9.54199C7.40946 9.5441 7.40928 9.5458 7.40901 9.54688V9.54883C7.33443 9.84748 7.40123 10.1636 7.59066 10.4062C7.78016 10.649 8.07081 10.791 8.37874 10.791H36.6209ZM9.68734 8.67969C9.88241 7.89919 10.1299 6.91098 10.3377 6.0791L10.3719 5.95703C10.4633 5.67629 10.6224 5.42171 10.8348 5.21484C11.0775 4.97846 11.381 4.81382 11.7117 4.74023C13.444 4.35511 16.1954 3.74364 18.5135 3.22852C19.6725 2.97097 20.7232 2.73746 21.4842 2.56836C21.8645 2.48385 22.1726 2.41548 22.3856 2.36816C22.4272 2.35891 22.4656 2.35038 22.4998 2.34277C22.534 2.35037 22.5724 2.35891 22.6141 2.36816C22.827 2.41548 23.1352 2.48386 23.5155 2.56836C24.2765 2.73746 25.3272 2.97097 26.4862 3.22852C28.8043 3.74365 31.5557 4.35511 33.2879 4.74023L33.411 4.77246C33.6938 4.85644 33.9526 5.00811 34.1649 5.21484C34.4076 5.45122 34.5796 5.75046 34.6619 6.0791C34.8698 6.91098 35.1173 7.89919 35.3123 8.67969C35.3217 8.71716 35.3306 8.75454 35.3397 8.79102H9.65999C9.66911 8.75454 9.67797 8.71716 9.68734 8.67969Z"></path>
+      <path d="M33.0908 24.9121C35.9799 24.9121 37.4763 24.1179 38.8564 23.3818C40.124 22.7058 41.2754 22.0879 43.6816 22.0879C44.086 22.0878 44.4506 21.8443 44.6054 21.4707C44.7602 21.0971 44.6746 20.6669 44.3886 20.3809L38.7402 14.7324C38.5527 14.5449 38.2983 14.4395 38.0332 14.4395H6.96676C6.70155 14.4395 6.44726 14.5449 6.25973 14.7324L0.611293 20.3809C0.325315 20.6669 0.23972 21.097 0.394496 21.4707C0.549318 21.8443 0.913924 22.0879 1.31832 22.0879C3.72449 22.0879 4.87591 22.7058 6.14352 23.3818C7.52358 24.1179 9.02 24.9121 11.9091 24.9121C14.7983 24.9121 16.2947 24.1179 17.6748 23.3818C18.9424 22.7058 20.0938 22.0879 22.5 22.0879C24.9061 22.0879 26.0576 22.7058 27.3252 23.3818C28.7052 24.1179 30.2017 24.9121 33.0908 24.9121ZM33.0908 22.9121C30.6846 22.9121 29.5332 22.2933 28.2656 21.6172C26.8856 20.8812 25.3889 20.0879 22.5 20.0879C19.6111 20.0879 18.1143 20.8812 16.7343 21.6172C15.4667 22.2933 14.3153 22.9121 11.9091 22.9121C9.50298 22.9121 8.35156 22.2933 7.08395 21.6172C6.11129 21.0984 5.08017 20.5533 3.54489 20.2754L7.38082 16.4395H37.6191L41.4541 20.2754C39.919 20.5534 38.8876 21.0984 37.915 21.6172C36.6475 22.2932 35.4968 22.9121 33.0908 22.9121Z"></path>
+        <path d="M22.4994 44.6807C23.2757 44.6808 24.0347 44.4517 24.6801 44.0205C25.3255 43.5893 25.8285 42.976 26.1254 42.2588C26.4225 41.5417 26.5005 40.7525 26.349 39.9912C26.1976 39.2301 25.8236 38.5312 25.2748 37.9824L23.9135 36.6221L36.144 24.3916C36.5345 24.0011 36.5345 23.3671 36.144 22.9766C35.7535 22.5864 35.1204 22.5864 34.7299 22.9766L22.4994 35.208L10.2699 22.9766C9.87949 22.5864 9.24634 22.5864 8.85588 22.9766C8.46536 23.3671 8.46536 24.0011 8.85588 24.3916L21.0854 36.6221L19.725 37.9824C19.1762 38.5312 18.8023 39.2301 18.6508 39.9912C18.4994 40.7524 18.5765 41.5418 18.8735 42.2588L18.9946 42.5225C19.2986 43.1263 19.7549 43.6431 20.3197 44.0205C20.965 44.4515 21.7235 44.6807 22.4994 44.6807ZM22.4994 42.6816C22.1189 42.6817 21.7465 42.5688 21.4301 42.3574C21.1139 42.1461 20.8677 41.8455 20.7221 41.4941V41.4932C20.5765 41.1416 20.5376 40.755 20.6117 40.3818C20.686 40.0085 20.8699 39.6656 21.1391 39.3965L22.4994 38.0361L23.8608 39.3965C24.1299 39.6656 24.3129 40.0085 24.3871 40.3818C24.4613 40.755 24.4234 41.1416 24.2778 41.4932V41.4941C24.1321 41.8456 23.8851 42.146 23.5688 42.3574C23.2525 42.5687 22.8808 42.6817 22.5004 42.6816H22.4994Z"></path>
+    </g>
+  </g>
+</svg>`,
+  },
+  {
+    id: 4,
+    number: '98',
+    suffix: '%',
+    title: 'Retention Rate',
+    iconColor: 'green',
+    iconSvg: `<svg width="45" height="45" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
+  <path d="M40.9905 21.1917C40.5794 20.9148 40.106 20.7443 39.6127 20.6954C39.1195 20.6464 38.6218 20.7207 38.1643 20.9114L33.1349 22.9823C32.2085 22.2894 31.0562 21.9079 29.7093 21.8378C30.0285 21.0827 30.2076 20.2496 30.2309 19.3854C30.2777 19.3932 30.3166 19.3932 30.3633 19.3932C31.2431 19.3932 32.6912 19.0351 33.1739 16.7929C34.5363 16.1856 36.0078 15.189 36.1791 13.7176C36.3114 12.4875 35.5095 11.2574 33.7811 10.0584C33.6643 9.98834 33.5787 9.91049 33.5008 9.81706C33.3685 9.67692 33.2673 9.46671 33.1972 9.20979L32.3642 5.57397C31.9126 2.91134 27.5216 1.67344 23.9169 1.1051C22.9904 0.964965 22.0095 0.964965 21.0752 1.1051C17.4783 1.67344 13.0873 2.91134 12.6513 5.52726L11.8105 9.17865C11.7482 9.38886 11.6626 9.67692 11.5847 9.77813C11.5769 9.78592 11.5691 9.80149 11.5613 9.80928C11.5224 9.85599 11.4134 9.93384 11.2188 10.0662C9.49041 11.2574 8.6885 12.4875 8.82864 13.7176C8.99214 15.1968 10.4636 16.1856 11.8261 16.7929C12.3088 19.0351 13.7569 19.3932 14.6288 19.3932C14.6833 19.3932 14.7223 19.3932 14.769 19.3854C14.7923 20.2496 14.9714 21.0827 15.2906 21.8378C13.9437 21.9079 12.7915 22.2894 11.865 22.9823L6.83556 20.9114C5.9013 20.5221 4.85026 20.6311 4.00943 21.1917C3.59859 21.4679 3.26218 21.8412 3.02997 22.2785C2.79776 22.7157 2.67691 23.2035 2.67811 23.6986V28.8759C2.67811 29.9192 3.19974 30.869 4.0795 31.4218C4.56998 31.7332 5.13054 31.8889 5.68331 31.8889C6.12708 31.8889 6.57085 31.7955 6.99127 31.5931L9.31134 30.4875C9.35027 30.9547 9.3892 31.2583 9.40477 31.3206C8.75857 32.0836 8.33037 33.049 8.19802 34.1078L7.7776 37.4633C7.72303 37.9439 7.80689 38.43 8.0193 38.8644C8.23171 39.2989 8.56383 39.6637 8.97657 39.9157C13.3987 42.6095 17.9532 43.9876 22.5 44.0031C27.0467 43.9876 31.6012 42.6095 36.0311 39.908C36.872 39.3941 37.3391 38.4287 37.2145 37.4555L36.8019 34.1078C36.6695 33.049 36.2413 32.0836 35.5951 31.3206C35.6107 31.2116 35.6574 30.9235 35.6886 30.4875L38.0086 31.5931C38.4291 31.7955 38.8728 31.8889 39.3166 31.8889C39.8694 31.8889 40.4299 31.7332 40.9204 31.4218C41.8002 30.869 42.3218 29.9192 42.3218 28.8759V23.6986C42.3218 22.6865 41.8235 21.7522 40.9905 21.1917ZM32.8079 24.8041C34.1237 26.3534 34.2093 28.7981 34.1393 30.1528C34.1176 30.1368 34.0941 30.1238 34.0692 30.1138C34.0692 30.1138 28.0199 27.0775 27.5839 26.8517C27.1946 26.6181 26.8287 26.0498 26.5328 25.2712C27.4204 24.8041 28.1911 24.1579 28.7984 23.3716H29.25C30.8226 23.3716 31.9905 23.8465 32.8079 24.8041ZM23.3719 24.4927H21.628C18.7006 24.4927 16.3105 22.1026 16.3105 19.1752V12.5576C17.7352 11.8024 22.9904 9.4745 28.6894 12.5576V19.1752C28.6894 22.1026 26.2993 24.4927 23.3719 24.4927ZM26.128 27.638C26.0501 28.004 24.8122 28.6424 22.5 28.6424C20.1954 28.6424 18.9576 28.0117 18.8797 27.638C19.3546 27.1242 19.6894 26.4624 19.923 25.824C20.4679 25.9642 21.0441 26.0498 21.628 26.0498H23.3719C23.9558 26.0498 24.532 25.9642 25.077 25.824C25.3183 26.4624 25.6609 27.1242 26.128 27.638ZM31.7102 16.1467C31.461 17.8673 30.6903 17.875 30.2465 17.8361V14.8543L30.4489 14.7531C31.0873 14.4339 31.4844 14.4339 31.5856 14.5039C31.6012 14.5195 31.9126 14.7608 31.7102 16.1467ZM14.7534 17.8361C14.3252 17.875 13.5389 17.8828 13.2897 16.1467C13.0873 14.7608 13.3987 14.5195 13.4143 14.5039C13.5155 14.4261 13.9048 14.4339 14.5432 14.7453L14.7534 14.8543V17.8361ZM15.1271 11.4364C14.8935 11.5844 14.7534 11.8335 14.7534 12.0982V13.1415C13.6245 12.721 12.9082 12.9468 12.4956 13.2505C12.0129 13.6008 11.7404 14.1769 11.6859 14.9711C10.8996 14.5117 10.4247 14.0057 10.378 13.5463C10.3079 12.9468 10.9229 12.1605 12.1608 11.3041C12.3321 11.1873 12.4878 11.0705 12.628 10.9304C18.9186 7.07657 26.5173 7.09214 32.4809 10.9849C32.6133 11.1095 32.7379 11.234 32.8936 11.343C34.077 12.1605 34.692 12.9468 34.6297 13.5385C34.5752 14.0057 34.1003 14.5039 33.314 14.9711C33.2517 14.1769 32.987 13.6008 32.5043 13.2505C32.0917 12.9468 31.3832 12.721 30.2465 13.1415V12.0982C30.2457 11.9623 30.2093 11.8291 30.141 11.7116C30.0727 11.5941 29.9749 11.4966 29.8572 11.4287C22.3442 7.05322 15.4152 11.2574 15.1271 11.4364ZM12.192 24.8041C13.0094 23.8465 14.1773 23.3716 15.7499 23.3716H16.2015C16.8115 24.1602 17.5842 24.8081 18.4671 25.2712C18.1868 26.0342 17.8131 26.6104 17.416 26.8517C16.9878 27.0697 10.9307 30.1138 10.9307 30.1138C10.9074 30.1216 10.884 30.1372 10.8607 30.1528C10.7906 28.8059 10.8684 26.3534 12.192 24.8041ZM12.1998 39.8924C11.3752 39.4944 10.5699 39.0579 9.78626 38.5844C9.45927 38.382 9.2802 38.0239 9.32691 37.6502L9.73954 34.3024C9.89525 33.0801 10.6115 32.0135 11.6236 31.5074C12.0363 31.2972 12.4178 31.1026 12.7837 30.9235C12.0596 33.1502 12.1141 37.5957 12.1998 39.8924ZM27.7007 41.5118L27.6072 41.7998C25.91 42.2203 24.205 42.4382 22.5 42.446C20.8027 42.4382 19.0899 42.2203 17.3927 41.7998L17.2915 41.4884C15.9446 37.6891 16.9178 31.8656 17.4005 29.5455C17.5095 29.055 17.5795 28.7669 17.5795 28.7591C17.5951 28.6891 17.5951 28.6268 17.5951 28.5567C17.852 28.9616 18.3269 29.382 19.1911 29.7012C20.0787 30.0204 21.2543 30.1995 22.5 30.1995C24.4385 30.1995 26.634 29.7557 27.4048 28.5723C27.4048 28.6346 27.4048 28.6969 27.4204 28.7591C27.4204 28.7669 27.4904 29.055 27.5994 29.5377C28.0821 31.8656 29.0553 37.6891 27.7007 41.5118ZM35.673 37.6502C35.7197 38.0239 35.5406 38.43 35.2136 38.5844C34.4117 39.0671 33.6098 39.4953 32.8001 39.8924C32.8858 37.5957 32.9403 33.1268 32.2162 30.9235C32.5822 31.1026 32.9636 31.2972 33.3763 31.4996C34.3884 32.0135 35.1047 33.0801 35.2604 34.3024L35.673 37.6502Z"></path>
+</svg>`,
+  },
+];

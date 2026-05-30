@@ -1,0 +1,61 @@
+/* globals.css - reset default Next.js styles */
+@layer base {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* PC and Large Desktop banner padding fix to prevent button clipping under search filter tabs */
+.home2-banner-section .banner-wrapper .banner-content-wrap {
+  padding: 130px 0 80px !important;
+}
+
+/* Mobile banner responsive overflow fixes */
+@media (max-width: 767px) {
+  .home2-banner-section .banner-wrapper .banner-img-area img,
+  .home2-banner-section .banner-wrapper .banner-video-area,
+  .home2-banner-section .banner-wrapper .banner-video-area video {
+    min-height: 520px !important;
+    height: 520px !important;
+  }
+  .home2-banner-section .banner-wrapper .banner-content-wrap {
+    padding: 60px 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .home2-banner-section .banner-wrapper .banner-img-area img,
+  .home2-banner-section .banner-wrapper .banner-video-area,
+  .home2-banner-section .banner-wrapper .banner-video-area video {
+    min-height: 540px !important;
+    height: 540px !important;
+  }
+  .home2-banner-section .banner-wrapper .banner-content-wrap {
+    padding: 45px 0 !important;
+  }
+  .home2-banner-section .banner-wrapper .banner-content-wrap .banner-content h1,
+  .home2-banner-section .banner-wrapper .banner-content-wrap .banner-content h2 {
+    font-size: 32px !important;
+    margin-bottom: 12px !important;
+    line-height: 1.2 !important;
+  }
+  .home2-banner-section .banner-wrapper .banner-content-wrap .banner-content p {
+    font-size: 15px !important;
+    line-height: 22px !important;
+  }
+  .home2-banner-section .banner-wrapper .banner-content-wrap .banner-content .banner-btn-group {
+    margin-top: 20px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+  .home2-banner-section .banner-wrapper .banner-content-wrap .banner-content .banner-btn-group a {
+    padding: 12px 24px !important;
+    font-size: 14px !important;
+  }
+}
+
