@@ -1,16 +1,44 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { popularPackages } from '@/data/homeData';
 import PackageCard from '../PackageCard';
 
 export default function PopularPackages() {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && (window as any).Swiper) {
+      new (window as any).Swiper(".home1-trip-slider", {
+        slidesPerView: 1,
+        speed: 1500,
+        spaceBetween: 24,
+        autoplay: {
+          delay: 2500,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".package-slider-next",
+          prevEl: ".package-slider-prev",
+        },
+        breakpoints: {
+          280: { slidesPerView: 1 },
+          386: { slidesPerView: 1 },
+          576: { slidesPerView: 1 },
+          768: { slidesPerView: 2, spaceBetween: 15 },
+          992: { slidesPerView: 3, spaceBetween: 15 },
+          1200: { slidesPerView: 3, spaceBetween: 15 },
+          1400: { slidesPerView: 3 },
+        },
+      });
+    }
+  }, []);
+
   return (
     <div className="home2-package-slider-section mb-100">
       <div className="container">
         <div className="row justify-content-center mb-50 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
           <div className="col-xl-6 col-lg-8">
             <div className="section-title text-center">
-              <h2>Popular Package</h2>
-              <p>A curated list of the most popular travel packages based on different destinations.</p>
+              <h2>Popular Bihar Taxi Routes</h2>
+              <p>Most booked taxi routes across Bihar – reliable, comfortable, and on-time every time.</p>
             </div>
           </div>
         </div>

@@ -50,7 +50,7 @@ export default function AboutSection() {
           </div>
         </div>
         <div className="service-area wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-          <h6>We Provide to Smart Services</h6>
+          <h6>We Provide Smart Taxi Services</h6>
           <div className="row row-cols-xl-6 row-cols-lg-5 row-cols-md-3 row-cols-sm-2 row-cols-1 g-xxl-4 g-xl-3 g-lg-3 g-4">
             {smartServices.map((service) => (
               <div className="col" key={service.id}>
@@ -74,9 +74,9 @@ export default function AboutSection() {
           <img src="/images/trustpilot-star_1.svg" alt="" />
           <div className="text-and-logo">
             <p>
-              5.0 Rating out of 5.0 based on <span>24K+ reviews</span>
+              4.9 Rating out of 5.0 based on <span>5K+ Google reviews</span>
             </p>
-            <a href="http://trustpilot.com/">
+            <a href="https://google.com/">
               <img src="/images/trustpilot-logo_1.svg" alt="" />
             </a>
           </div>

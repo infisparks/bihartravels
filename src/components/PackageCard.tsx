@@ -61,7 +61,12 @@ export default function PackageCard({ packageData }: PackageCardProps) {
         </div>
 
         <div className="btn-and-price-area">
-          <a href={packageData.detailsLink} className="primary-btn1">
+          <a
+            href={`https://wa.me/918102550190?text=${encodeURIComponent(`Hello Taxi Service Bihar, I am interested in the "${packageData.title}" package. Please share details and availability.`)}`}
+            className="primary-btn1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span>
               Book Now
               <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
@@ -75,10 +80,6 @@ export default function PackageCard({ packageData }: PackageCardProps) {
               </svg>
             </span>
           </a>
-          <div className="price-area">
-            <h6>Per Person</h6>
-            <span>{packageData.price}</span>
-          </div>
         </div>
 
         <svg className="divider" height="6" viewBox="0 0 374 6" xmlns="http://www.w3.org/2000/svg">

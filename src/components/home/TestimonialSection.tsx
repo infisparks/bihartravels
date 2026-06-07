@@ -1,8 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { testimonials } from '@/data/homeData';
 import TestimonialCard from '../TestimonialCard';
 
 export default function TestimonialSection() {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && (window as any).Swiper) {
+      new (window as any).Swiper(".home1-testimonial-slider", {
+        slidesPerView: 1,
+        speed: 1500,
+        spaceBetween: 24,
+        autoplay: {
+          delay: 2500,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".testimonial-slider-next",
+          prevEl: ".testimonial-slider-prev",
+        },
+        breakpoints: {
+          280: { slidesPerView: 1 },
+          386: { slidesPerView: 1 },
+          576: { slidesPerView: 1 },
+          768: { slidesPerView: 2, spaceBetween: 15 },
+          992: { slidesPerView: 3, spaceBetween: 15 },
+          1200: { slidesPerView: 3, spaceBetween: 15 },
+          1400: { slidesPerView: 3 },
+        },
+      });
+    }
+  }, []);
+
   return (
     <div className="home2-testimonial-section">
       <div className="container">
