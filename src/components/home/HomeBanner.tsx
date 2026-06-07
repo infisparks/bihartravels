@@ -11,7 +11,14 @@ export default function HomeBanner() {
               <div className="banner-wrapper">
                 {slide.type === 'video' ? (
                   <div className="banner-video-area">
-                    <video autoPlay loop muted playsInline src={slide.src}></video>
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      src={slide.src}
+                      poster="/images/popular/Ashoka Pillar and Buddhist heritage.png"
+                    ></video>
                   </div>
                 ) : (
                   <div className="banner-img-area">
