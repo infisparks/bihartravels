@@ -88,7 +88,7 @@ export const bannerSlides: BannerSlide[] = [
   {
     id: 1,
     type: 'video',
-    src: '/media/home2-banner-video.mp4',
+    src: 'https://infisparks.github.io/images/bihartravel/home2-banner-video.mp4',
     title: 'Book Taxi Anywhere in Bihar – 24x7',
     description: 'Fast, Safe & Affordable Taxi Service Across Bihar. Patna Airport Pickup, Railway Station drop, Outstation, One-Way, Round-Trip Taxi. 2000+ Driver Network.',
     callLink: 'tel:+918102550190',

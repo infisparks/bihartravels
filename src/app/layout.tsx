@@ -2,11 +2,36 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 
+const SITE_URL = "https://taxiservicebihar.com";
+const THUMBNAIL = "https://raw.githubusercontent.com/infisparks/images/refs/heads/main/bihartravel/thumbnail.png";
+
 export const metadata: Metadata = {
-  title: "Taxi Service Bihar – Bihar's Trusted Taxi Network",
+  title: "Taxi Service Bihar – Your Journey, Our Priority!",
   description: "Fast, safe & affordable taxi service across Bihar. 24x7 Patna Airport/Junction pickups, one-way taxi, outstation tour packages with 2000+ driver network. Book instantly via WhatsApp or Call +91 81025 50190.",
+  metadataBase: new URL(SITE_URL),
   icons: {
     icon: "/images/fav-icon.svg",
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    title: "Taxi Service Bihar – Your Journey, Our Priority!",
+    description: "Fast, safe & affordable taxi service across Bihar. Book one-way, outstation & round-trip taxis instantly. 2000+ drivers. 24x7 service.",
+    siteName: "Taxi Service Bihar",
+    images: [
+      {
+        url: THUMBNAIL,
+        width: 1200,
+        height: 630,
+        alt: "Taxi Service Bihar – Your Journey, Our Priority",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Taxi Service Bihar – Your Journey, Our Priority!",
+    description: "Fast, safe & affordable taxi service across Bihar. Book one-way, outstation & round-trip taxis instantly. 2000+ drivers. 24x7 service.",
+    images: [THUMBNAIL],
   },
 };
 
