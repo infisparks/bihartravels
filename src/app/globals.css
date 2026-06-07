@@ -59,3 +59,20 @@
   }
 }
 
+
+/* Fix: allow destination dropdown to overflow the filter card */
+.filter-wrapper {
+  z-index: 99 !important;
+}
+
+.filter-wrapper .filter-input-wrap {
+  overflow: visible !important;
+}
+
+.filter-wrapper .filter-input-wrap .filter-input {
+  overflow: visible !important;
+}
+
+.filter-wrapper .filter-input-wrap .filter-input .single-search-box {
+  overflow: visible !important;
+}

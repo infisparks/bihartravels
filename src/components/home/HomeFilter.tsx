@@ -204,7 +204,7 @@ function DestinationDropdown({ selectedRoute, onSelectRoute, placeholder = "Wher
           </div>
         </div>
       </div>
-      <div className={`custom-select-wrap ${className} ${isOpen ? 'active' : ''}`} style={{ display: isOpen ? 'block' : 'none', transform: isOpen ? 'scaleY(1)' : 'scaleY(0)', transformOrigin: 'top', transition: 'transform 0.15s ease-out' }}>
+      <div className={`custom-select-wrap ${className} ${isOpen ? 'active' : ''}`} style={{ display: 'block', opacity: isOpen ? 1 : 0, transform: isOpen ? 'scaleY(1)' : 'scaleY(0)', transformOrigin: 'top', transition: 'transform 0.15s ease-out, opacity 0.15s ease-out', pointerEvents: isOpen ? 'auto' : 'none', zIndex: 9999 }}>
         <div className="custom-select-search-area">
           <i className="bx bx-search"></i>
           <input 
