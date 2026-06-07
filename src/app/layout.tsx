@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Book Bihar Taxi – Bihar's Trusted Taxi Network",
+  title: "Taxi Service Bihar – Bihar's Trusted Taxi Network",
   description: "Fast, safe & affordable taxi service across Bihar. 24x7 Patna Airport/Junction pickups, one-way taxi, outstation tour packages with 2000+ driver network. Book instantly via WhatsApp or Call +91 81025 50190.",
   icons: {
     icon: "/images/fav-icon.svg",

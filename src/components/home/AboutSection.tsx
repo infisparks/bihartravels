@@ -9,9 +9,9 @@ export default function AboutSection() {
           <div className="col-lg-6 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
             <div className="about-content">
               <div className="section-title">
-                <h2>Your Trustpoint, GoFly Best for Travel Agency.</h2>
+                <h2>Your Trustpoint, Taxi Service Bihar Best for Travel Agency.</h2>
                 <p>
-                  <span>At GoFly Travel Agency, we are passionate about creating exceptional travel experiences.</span>{' '}
+                  <span>At Taxi Service Bihar Travel Agency, we are passionate about creating exceptional travel experiences.</span>{' '}
                   Whether you're looking for a relaxing beach vacation, an adventurous trek, a luxurious getaway, or a cultural expedition.
                 </p>
               </div>

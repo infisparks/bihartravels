@@ -7,7 +7,7 @@ export default function GallerySection() {
         <div className="row gy-md-4 gy-5">
           <div className="col-lg-3 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
             <div className="section-title">
-              <h2>GoFly Gallery</h2>
+              <h2>Taxi Service Bihar Gallery</h2>
               <p>We go beyond just booking trips—we create unforgettable travel experiences that match your dreams!</p>
               <a href="travel-package-02.html" className="primary-btn1 two black-bg">
                 <span>

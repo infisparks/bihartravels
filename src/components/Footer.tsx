@@ -66,7 +66,7 @@ export default function Footer() {
                                         <img src="/images/footer-logo.svg" alt="" />
                                     </a>
                                     <div className="address-area">
-                                        <span>Book Bihar Taxi</span>
+                                        <span>Taxi Service Bihar</span>
                                         <a href="#">Patna, Bihar, India</a>
                                     </div>
                                     <ul className="social-list">

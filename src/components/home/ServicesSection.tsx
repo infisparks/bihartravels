@@ -9,7 +9,7 @@ export default function ServicesSection() {
           <div className="row justify-content-center wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
             <div className="col-lg-9">
               <div className="section-title">
-                <h2>GoFly – Your Journey, Our Priority!</h2>
+                <h2>Taxi Service Bihar – Your Journey, Our Priority!</h2>
                 <svg height="6" viewBox="0 0 872 6" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM867 3.5L872 5.88675V0.113249L867 2.5V3.5ZM4.5 3.5H867.5V2.5H4.5V3.5Z"></path>
                 </svg>
