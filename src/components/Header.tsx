@@ -90,9 +90,6 @@ export default function Header() {
                                 <li><Link href="/packages/darbhanga-heritage-tour" onClick={handleLinkClick}>Darbhanga Heritage Tour</Link></li>
                             </ul>
                         </li>
-                        <li>
-                            <Link href="/#areas" onClick={handleLinkClick}>Service Areas</Link>
-                        </li>
                     </ul>
                     <div className="contact-area d-xl-none d-flex">
                         <div className="icon">

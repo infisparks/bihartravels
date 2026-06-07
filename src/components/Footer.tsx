@@ -39,7 +39,7 @@ export default function Footer() {
                                 </div>
                                 <div className="content">
                                     <span>Mail Us</span>
-                                    <a href="mailto:booking@bihartaxi.in">booking@bihartaxi.in</a>
+                                    <a href="mailto:taxiservicepatnabihar@gmail.com">taxiservicepatnabihar@gmail.com</a>
                                 </div>
                             </li>
                             <li className="single-contact">

@@ -8621,11 +8621,14 @@ header.style-3.three .nav-right .primary-btn1 {
 
 @media (max-width: 576px) {
   .filter-wrapper .filter-item-list {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: -27px;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 5px;
   }
 }
 

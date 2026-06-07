@@ -140,7 +140,7 @@ export const popularPackages: PackageData[] = [
   {
     id: 1,
     title: 'Bodh Gaya & Rajgir Pilgrimage Tour',
-    images: ['/images/tour-package-img1.jpg'],
+    images: ['/images/popular/Tourism photography of Bodh Gaya and Rajgir.png'],
     badge: 'Sale on!',
     location: 'Bodh Gaya & Rajgir, Bihar',
     locationLink: '/packages/bodh-gaya-tour',
@@ -154,9 +154,7 @@ export const popularPackages: PackageData[] = [
     id: 2,
     title: 'Rajgir Nature & Glass Bridge Tour',
     images: [
-      '/images/tour-package-img2_1.jpg',
-      '/images/tour-package-img10.jpg',
-      '/images/tour-package-img11.jpg',
+      '/images/popular/Rajgir Glass Skywalk Bridge.png',
     ],
     badge: 'Hot Sale!',
     location: 'Rajgir, Bihar',
@@ -170,7 +168,7 @@ export const popularPackages: PackageData[] = [
   {
     id: 3,
     title: 'Nalanda Ancient Ruins Heritage Tour',
-    images: ['/images/tour-package-img2.jpg'],
+    images: ['/images/popular/Nalanda University ruins.png'],
     location: 'Nalanda, Bihar',
     locationLink: '/packages/nalanda-tour',
     duration: '1 Day (Patna Return)',
@@ -182,7 +180,7 @@ export const popularPackages: PackageData[] = [
   {
     id: 4,
     title: 'Vaishali Buddhist & Jain Heritage Tour',
-    images: ['/images/tour-package-img6.jpg'],
+    images: ['/images/popular/Ashoka Pillar and Buddhist heritage.png'],
     badge: 'Hot Sale!',
     location: 'Vaishali, Bihar',
     locationLink: '/packages/vaishali-tour',
@@ -195,7 +193,7 @@ export const popularPackages: PackageData[] = [
   {
     id: 5,
     title: 'Madhubani Art & Mithila Culture Tour',
-    images: ['/images/tour-package-img4.jpg'],
+    images: ['/images/popular/Traditional Mithila cultural village in Madhubani.png'],
     location: 'Madhubani, Bihar',
     locationLink: '/packages/madhubani-tour',
     duration: '02 Days / 1 Night',
