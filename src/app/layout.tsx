@@ -56,6 +56,20 @@ export default function RootLayout({
         <link rel="stylesheet" href="/css/style.css" />
       </head>
       <body className="tt-magic-cursor">
+        {/* Google tag (gtag.js) */}
+        <Script 
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18221151440" 
+          strategy="afterInteractive" 
+        />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18221151440');
+          `}
+        </Script>
+
         <div id="magic-cursor">
           <div id="ball"></div>
         </div>

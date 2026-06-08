@@ -1,6 +1,9 @@
+"use client";
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import { trackConversion } from '@/utils/gtag';
 import { PageDetailData } from '@/data/pagesData';
 
 interface PageDetailTemplateProps {
@@ -66,7 +69,7 @@ export default function PageDetailTemplate({ data }: PageDetailTemplateProps) {
                     <a href="tel:+918102550190" className="primary-btn1 two">
                       <span>Call for Price Booking</span>
                     </a>
-                    <a href={getWhatsAppLink(`I want to book a taxi for: ${data.heading}`)} className="primary-btn1 two transparent">
+                    <a onClick={trackConversion} href={getWhatsAppLink(`I want to book a taxi for: ${data.heading}`)} className="primary-btn1 two transparent">
                       <span>Chat on WhatsApp</span>
                     </a>
                   </div>
@@ -133,7 +136,7 @@ export default function PageDetailTemplate({ data }: PageDetailTemplateProps) {
                           <a href="tel:+918102550190" style={{ flex: '1', textAlign: 'center', background: '#4F46E5', color: '#FFFFFF', padding: '10px', borderRadius: '8px', fontSize: '14px', fontWeight: 'bold' }}>
                             Call for Price
                           </a>
-                          <a href={getWhatsAppLink(`I want to book: ${car.name} for ${data.heading}`)} style={{ flex: '1', textAlign: 'center', border: '1px solid #4F46E5', color: '#4F46E5', padding: '10px', borderRadius: '8px', fontSize: '14px', fontWeight: 'bold' }}>
+                          <a onClick={trackConversion} href={getWhatsAppLink(`I want to book: ${car.name} for ${data.heading}`)} style={{ flex: '1', textAlign: 'center', border: '1px solid #4F46E5', color: '#4F46E5', padding: '10px', borderRadius: '8px', fontSize: '14px', fontWeight: 'bold' }}>
                             WhatsApp
                           </a>
                         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { taxiRoutes, carTypes, TaxiRoute } from '@/data/homeData';
+import { trackConversion } from '@/utils/gtag';
 
 const biharPlaces = [
   // Major Cities & Districts
@@ -284,6 +285,7 @@ export default function HomeFilter() {
 
     const text = `Hello Taxi Service Bihar, I want to book a One-Way Taxi from ${oneWayRoute.route} on Date: ${dateStr} for Car Type: ${carType}. Please confirm availability.`;
     const encodedText = encodeURIComponent(text);
+    trackConversion();
     window.open(`https://wa.me/918102550190?text=${encodedText}`, '_blank');
   };
 
@@ -302,6 +304,7 @@ export default function HomeFilter() {
 
     const text = `Hello Taxi Service Bihar, I want to book a Round-Trip Taxi for ${roundTripRoute.route} from ${dateStr} for Car Type: ${carType}. Please confirm availability.`;
     const encodedText = encodeURIComponent(text);
+    trackConversion();
     window.open(`https://wa.me/918102550190?text=${encodedText}`, '_blank');
   };
 
@@ -320,6 +323,7 @@ export default function HomeFilter() {
 
     const text = `Hello Taxi Service Bihar, I want to book an Outstation Taxi for ${outstationRoute.route} on Date: ${dateStr} for Car Type: ${carType}. Please confirm availability.`;
     const encodedText = encodeURIComponent(text);
+    trackConversion();
     window.open(`https://wa.me/918102550190?text=${encodedText}`, '_blank');
   };
 
@@ -341,6 +345,7 @@ export default function HomeFilter() {
 
     const text = `Hello Taxi Service Bihar, I want to book an Airport Transfer (${transferType}) for ${airportRoute.route} on Date: ${dateStr} for Duration: ${duration}. Please confirm availability.`;
     const encodedText = encodeURIComponent(text);
+    trackConversion();
     window.open(`https://wa.me/918102550190?text=${encodedText}`, '_blank');
   };
 
