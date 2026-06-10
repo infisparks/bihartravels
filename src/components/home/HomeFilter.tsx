@@ -175,13 +175,17 @@ function DestinationDropdown({ selectedRoute, onSelectRoute, placeholder = "Wher
   const dropdownRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
+    function handleClickOutside(event: MouseEvent | TouchEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
   }, []);
 
   const routes = React.useMemo(() => {
@@ -196,7 +200,7 @@ function DestinationDropdown({ selectedRoute, onSelectRoute, placeholder = "Wher
           <path d="M17.4601 8.4599H16.2564C15.9858 4.86535 13.1291 2.00812 9.53458 1.7372V0.539976C9.53458 0.241723 9.29268 0 8.9946 0C8.69635 0 8.45462 0.241723 8.45462 0.539976V1.7372C4.85986 2.00812 2.00297 4.86535 1.73235 8.4599H0.540018C0.241723 8.4599 0 8.7017 0 8.99987C0 9.29813 0.241723 9.53985 0.539976 9.53985H1.73239C2.00297 13.1344 4.85991 15.9916 8.45441 16.2625V17.4601C8.45441 17.7583 8.69614 18 8.99439 18C9.29251 18 9.53428 17.7583 9.53428 17.4601V16.2625C13.1289 15.9918 15.9858 13.1346 16.2564 9.53985H17.4601C17.7583 9.53985 18 9.29813 18 8.99987C18 8.70175 17.7583 8.4599 17.4601 8.4599ZM8.99443 15.2096C5.56504 15.2094 2.78509 12.4291 2.78509 8.9997C2.78522 5.57014 5.56554 2.7902 8.99494 2.7902C12.4245 2.7902 15.2046 5.57048 15.2046 8.99987C15.2005 12.428 12.4225 15.2058 8.99443 15.2096Z" />
         </g>
       </svg>
-      <div className="custom-select-dropdown destination-dropdown" onClick={() => setIsOpen(!isOpen)}>
+      <div className="custom-select-dropdown destination-dropdown react-dropdown" onClick={() => setIsOpen(!isOpen)}>
         <input type="text" readOnly value={placeholder} style={{ display: 'none' }} />
         <div className="input-field-value">
           <div className="destination">
@@ -205,7 +209,7 @@ function DestinationDropdown({ selectedRoute, onSelectRoute, placeholder = "Wher
           </div>
         </div>
       </div>
-      <div className={`custom-select-wrap ${className} ${isOpen ? 'active' : ''}`} style={{ display: 'block', opacity: isOpen ? 1 : 0, transform: isOpen ? 'scaleY(1)' : 'scaleY(0)', transformOrigin: 'top', transition: 'transform 0.15s ease-out, opacity 0.15s ease-out', pointerEvents: isOpen ? 'auto' : 'none', zIndex: 9999 }}>
+      <div className={`custom-select-wrap react-dropdown-wrap ${className} ${isOpen ? 'active' : ''}`} style={{ display: 'block', opacity: isOpen ? 1 : 0, transform: isOpen ? 'scaleY(1)' : 'scaleY(0)', transformOrigin: 'top', transition: 'transform 0.15s ease-out, opacity 0.15s ease-out', pointerEvents: isOpen ? 'auto' : 'none', zIndex: 9999 }}>
         <div className="custom-select-search-area">
           <i className="bx bx-search"></i>
           <input 
@@ -251,13 +255,17 @@ export default function HomeFilter() {
   const airportsRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
+    function handleClickOutside(event: MouseEvent | TouchEvent) {
       if (airportsRef.current && !airportsRef.current.contains(event.target as Node)) {
         setAirportIsOpen(false);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
   }, []);
 
   const airports = [
@@ -350,7 +358,7 @@ export default function HomeFilter() {
   };
 
   return (
-    <div className="filter-wrapper">
+    <div className="filter-wrapper" style={{ position: 'relative', zIndex: 20, transform: 'translate3d(0,0,0)' }}>
       <div className="container">
         <ul className="filter-item-list">
           <li className="single-item active">
@@ -584,7 +592,7 @@ export default function HomeFilter() {
                   <path d="M17.4601 8.4599H16.2564C15.9858 4.86535 13.1291 2.00812 9.53458 1.7372V0.539976C9.53458 0.241723 9.29268 0 8.9946 0C8.69635 0 8.45462 0.241723 8.45462 0.539976V1.7372C4.85986 2.00812 2.00297 4.86535 1.73235 8.4599H0.540018C0.241723 8.4599 0 8.7017 0 8.99987C0 9.29813 0.241723 9.53985 0.539976 9.53985H1.73239C2.00297 13.1344 4.85991 15.9916 8.45441 16.2625V17.4601C8.45441 17.7583 8.69614 18 8.99439 18C9.29251 18 9.53428 17.7583 9.53428 17.4601V16.2625C13.1289 15.9918 15.9858 13.1346 16.2564 9.53985H17.4601C17.7583 9.53985 18 9.29813 18 8.99987C18 8.70175 17.7583 8.4599 17.4601 8.4599ZM8.99443 15.2096C5.56504 15.2094 2.78509 12.4291 2.78509 8.9997C2.78522 5.57014 5.56554 2.7902 8.99494 2.7902C12.4245 2.7902 15.2046 5.57048 15.2046 8.99987C15.2005 12.428 12.4225 15.2058 8.99443 15.2096Z" />
                 </g>
               </svg>
-              <div className="custom-select-dropdown destination-dropdown" onClick={() => setAirportIsOpen(!airportIsOpen)}>
+              <div className="custom-select-dropdown destination-dropdown react-dropdown" onClick={() => setAirportIsOpen(!airportIsOpen)}>
                 <input type="text" readOnly defaultValue="Select Airport" style={{ display: 'none' }} />
                 <div className="input-field-value">
                   <div className="destination">
@@ -593,7 +601,7 @@ export default function HomeFilter() {
                   </div>
                 </div>
               </div>
-              <div className={`custom-select-wrap five ${airportIsOpen ? 'active' : ''}`} style={{ display: airportIsOpen ? 'block' : 'none', transform: airportIsOpen ? 'scaleY(1)' : 'scaleY(0)', transformOrigin: 'top', transition: 'transform 0.15s ease-out' }}>
+              <div className={`custom-select-wrap react-dropdown-wrap five ${airportIsOpen ? 'active' : ''}`} style={{ display: airportIsOpen ? 'block' : 'none', transform: airportIsOpen ? 'scaleY(1)' : 'scaleY(0)', transformOrigin: 'top', transition: 'transform 0.15s ease-out' }}>
                 <div className="custom-select-search-area">
                   <i className="bx bx-search"></i>
                   <input 

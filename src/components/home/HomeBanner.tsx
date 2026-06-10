@@ -18,6 +18,7 @@ export default function HomeBanner() {
                       playsInline
                       src={slide.src}
                       poster="/images/popular/Ashoka Pillar and Buddhist heritage.png"
+                      style={{ pointerEvents: 'none' }}
                     ></video>
                   </div>
                 ) : (

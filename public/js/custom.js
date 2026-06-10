@@ -1569,13 +1569,16 @@
   });
 
   // Handle click on the input item
-  $(".custom-select-dropdown").on("click", function () {
-    $(".custom-select-wrap").toggleClass("active");
+  $(".custom-select-dropdown:not(.react-dropdown)").on("click", function () {
+    $(".custom-select-wrap:not(.react-dropdown-wrap)").toggleClass("active");
   });
 
   $(".single-search-box, .single-field").each(function () {
     var $box = $(this);
     var $dropdown = $box.find(".custom-select-dropdown");
+    if ($dropdown.hasClass("react-dropdown")) {
+      return; // Skip React-controlled dropdowns to prevent event capture conflicts!
+    }
     var $input = $dropdown.find("input");
     var $wrap = $box.find(".custom-select-wrap");
     var $searchInput = $wrap.find(".custom-select-search-area input");
