@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 
-const SITE_URL = "https://taxiservicebihar.com";
+const SITE_URL = "https://www.taxiservicebihar.com";
 const THUMBNAIL = "https://raw.githubusercontent.com/infisparks/images/refs/heads/main/bihartravel/thumbnail.png";
 
 export const metadata: Metadata = {
