@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { routesData, servicesData, packagesData } from '@/data/pagesData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://taxiservicebihar.com';
+  const baseUrl = 'https://www.taxiservicebihar.com';
 
   // Base routes
   const staticRoutes: MetadataRoute.Sitemap = [
