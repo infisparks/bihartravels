@@ -38,7 +38,15 @@ const defaultRoutesList: TaxiRoute[] = [
   { route: 'Patna to Rajgir', category: 'Bihar Taxi Route', ridesCount: '600+' },
   { route: 'Patna to Bodh Gaya', category: 'Bihar Taxi Route', ridesCount: '900+' },
   { route: 'Patna to Nalanda', category: 'Bihar Taxi Route', ridesCount: '400+' },
+  { route: 'Patna to Anywhere', category: 'Bihar Taxi Route', ridesCount: '3000+' },
+  { route: 'Darbhanga to Anywhere', category: 'Bihar Taxi Route', ridesCount: '1800+' },
+  { route: 'Muzaffarpur to Anywhere', category: 'Bihar Taxi Route', ridesCount: '1500+' },
+  { route: 'Patna Airport to Anywhere', category: 'Airport Pick Up', ridesCount: '2500+' },
+  { route: 'Darbhanga Airport to Anywhere', category: 'Airport Pick Up', ridesCount: '1000+' },
+  { route: 'Danapur Station to Anywhere', category: 'Railway Station Pick Up', ridesCount: '1200+' },
+  { route: 'Patna Station to Anywhere', category: 'Railway Station Pick Up', ridesCount: '2000+' },
 ];
+
 
 function getRandomRidesCount(from: string, to: string): string {
   const str = from + to;

@@ -20,28 +20,42 @@ export default function PageDetailTemplate({ data }: PageDetailTemplateProps) {
     <>
       <Header />
       <main>
-        {/* Gallery Section */}
-        <div className="destination-details-gallery-section mb-50">
-          <div className="swiper destination-details-gallery-slider">
-            <div className="swiper-wrapper" style={{ display: 'flex', gap: '15px', overflowX: 'auto', padding: '10px 0' }}>
-              {data.galleryImages.map((img, idx) => (
-                <div className="swiper-slide" key={idx} style={{ flex: '0 0 350px', borderRadius: '10px', overflow: 'hidden' }}>
-                  <img src={img} alt={`${data.heading} Gallery ${idx + 1}`} style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
+        {/* Hero Banner Section */}
+        <div className="home2-banner-section" style={{ height: '480px', position: 'relative', overflow: 'hidden' }}>
+          <div className="banner-wrapper" style={{ height: '100%' }}>
+            <div className="banner-img-area" style={{ height: '100%', position: 'absolute', width: '100%', top: 0, left: 0 }}>
+              <img src={data.galleryImages[0] || "/images/bihar-cab-highway.png"} alt={data.heading} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.5)' }} />
+            </div>
+            <div className="banner-content-wrap" style={{ position: 'relative', zIndex: 5, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', background: 'rgba(0, 0, 0, 0.45)' }}>
+              <div className="container">
+                <div className="banner-content" style={{ maxWidth: '800px', margin: '0 auto' }}>
+                  <h1 style={{ color: '#FFFFFF', fontSize: '38px', fontWeight: '800', textShadow: '2px 2px 8px rgba(0,0,0,0.8)', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                    {data.heading}
+                  </h1>
+                  <p style={{ color: '#F3F4F6', fontSize: '18px', textShadow: '1px 1px 4px rgba(0,0,0,0.8)', marginTop: '15px', fontWeight: '500' }}>
+                    Safe, Fast & Affordable 24x7 Taxi Service in Bihar
+                  </p>
+                  <div className="banner-btn-group mt-30" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', justifyContent: 'center', marginTop: '30px' }}>
+                    <a href="tel:+918102550190" className="primary-btn1">
+                      <span>Call: +91 81025 50190</span>
+                    </a>
+                    <a onClick={trackConversion} href={getWhatsAppLink(`I want to book a taxi for: ${data.heading}`)} className="primary-btn1 two black-bg">
+                      <span>Book on WhatsApp</span>
+                    </a>
+                  </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
 
         {/* Content Section */}
-        <div className="destination-details-section mb-100">
+        <div className="destination-details-section pt-60 mb-100">
           <div className="container">
             <div className="row justify-content-center mb-60">
               <div className="col-lg-10">
                 <div className="destination-details-content">
-                  <h2>{data.heading}</h2>
-                  
-                  <ul className="destination-info">
+                  <ul className="destination-info" style={{ marginBottom: '30px' }}>
                     {data.distance && (
                       <li>
                         <div className="content">
@@ -63,16 +77,10 @@ export default function PageDetailTemplate({ data }: PageDetailTemplateProps) {
                     </li>
                   </ul>
 
-                  <p>{data.overview}</p>
-
-                  <div style={{ marginTop: '20px', display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
-                    <a href="tel:+918102550190" className="primary-btn1 two">
-                      <span>Call for Price Booking</span>
-                    </a>
-                    <a onClick={trackConversion} href={getWhatsAppLink(`I want to book a taxi for: ${data.heading}`)} className="primary-btn1 two transparent">
-                      <span>Chat on WhatsApp</span>
-                    </a>
-                  </div>
+                  <div 
+                    style={{ fontSize: '16px', lineHeight: '1.8', color: '#374151' }} 
+                    dangerouslySetInnerHTML={{ __html: data.overview }}
+                  />
                 </div>
               </div>
             </div>
@@ -89,37 +97,37 @@ export default function PageDetailTemplate({ data }: PageDetailTemplateProps) {
                   {
                     name: "Sedan (Dzire, Etios)",
                     desc: "Perfect for up to 4 passengers. Compact, fuel-efficient, and fully air-conditioned for comfortable short or long-distance city rides.",
-                    img: "/images/tour-package-img2.jpg",
+                    img: "/images/dzire_sedan.png",
                     features: "4 Passengers | 2 Bags | AC | Music System"
                   },
                   {
                     name: "Ertiga (with Carrier)",
                     desc: "Spacious 6-seater vehicle with a robust top luggage carrier. Ideal for family trips, wedding travels, and airport drops with heavy bags.",
-                    img: "/images/bihar-cab-highway.png",
+                    img: "/images/ertiga_carrier.png",
                     features: "6 Passengers | 5 Bags | Roof Carrier | AC"
                   },
                   {
                     name: "Ertiga (without Carrier)",
                     desc: "Sleek and comfortable 6-seater MUV without a carrier. Perfect for local site visits, short weekend getaways, and smooth highway trips.",
-                    img: "/images/bihar-cab-highway.png",
+                    img: "/images/ertiga_no_carrier.png",
                     features: "6 Passengers | 2 Bags | Rear AC Vents | Music System"
                   },
                   {
                     name: "SUV (Bolero, Scorpio)",
                     desc: "Rugged and powerful 7-seater vehicles designed for rural roads, rough terrains, and pilgrimage sites with absolute durability.",
-                    img: "/images/destination-dt-location-img3.jpg",
+                    img: "/images/scorpio_suv.png",
                     features: "7 Passengers | 4 Bags | High Clearance | AC"
                   },
                   {
                     name: "Innova Crysta",
                     desc: "Premium executive multi-purpose vehicle. Offers captain seats, high safety rating, dual-zone AC, and maximum luxury for long journeys.",
-                    img: "/images/destination-dt-location-img2.jpg",
+                    img: "/images/innova_crysta.png",
                     features: "7 Passengers | 4 Bags | Premium Interior | Dual AC"
                   },
                   {
                     name: "Tempo Traveller",
                     desc: "Perfect for large group outings, school picnics, or extended family pilgrimages. Available in 12, 17, and 26-seater variants with pushback seats.",
-                    img: "/images/destination-dt-location-img5.jpg",
+                    img: "/images/tempo_traveller.png",
                     features: "9-26 Passengers | Large Boot | Pushback Seats | AC"
                   }
                 ].map((car, idx) => (

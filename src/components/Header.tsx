@@ -56,6 +56,13 @@ export default function Header() {
                                 <li><Link href="/routes/darbhanga-to-patna-taxi" onClick={handleLinkClick}>Darbhanga to Patna Taxi</Link></li>
                                 <li><Link href="/routes/danapur-to-patna-taxi" onClick={handleLinkClick}>Danapur to Patna Taxi</Link></li>
                                 <li><Link href="/routes/danapur-to-darbhanga-taxi" onClick={handleLinkClick}>Danapur to Darbhanga Taxi</Link></li>
+                                <li><Link href="/routes/patna-to-anywhere-taxi" onClick={handleLinkClick}>Patna to Anywhere Taxi</Link></li>
+                                <li><Link href="/routes/darbhanga-to-anywhere-taxi" onClick={handleLinkClick}>Darbhanga to Anywhere Taxi</Link></li>
+                                <li><Link href="/routes/muzaffarpur-to-anywhere-taxi" onClick={handleLinkClick}>Muzaffarpur to Anywhere Taxi</Link></li>
+                                <li><Link href="/routes/patna-airport-to-anywhere-taxi" onClick={handleLinkClick}>Patna Airport to Anywhere</Link></li>
+                                <li><Link href="/routes/darbhanga-airport-to-anywhere-taxi" onClick={handleLinkClick}>Darbhanga Airport to Anywhere</Link></li>
+                                <li><Link href="/routes/danapur-station-to-anywhere-taxi" onClick={handleLinkClick}>Danapur Station to Anywhere</Link></li>
+                                <li><Link href="/routes/patna-station-to-anywhere-taxi" onClick={handleLinkClick}>Patna Station to Anywhere</Link></li>
                             </ul>
                         </li>
                         <li className="menu-item-has-children">
@@ -77,18 +84,19 @@ export default function Header() {
                             </ul>
                         </li>
                         <li className="menu-item-has-children">
-                            <Link href="/#packages" onClick={handleLinkClick}>Tour Packages</Link>
+                            <Link href="/#quick-booking" onClick={handleLinkClick}>Quick Booking</Link>
                             <i 
                                 className={`bi bi-chevron-down dropdown-icon ${activeDropdown === 'packages' ? 'active' : ''}`}
                                 onClick={(e) => toggleDropdown('packages', e)}
                             ></i>
                             <ul className="sub-menu" style={{ display: activeDropdown === 'packages' ? 'block' : undefined }}>
-                                <li><Link href="/packages/bodh-gaya-tour" onClick={handleLinkClick}>Bodh Gaya Tour</Link></li>
-                                <li><Link href="/packages/rajgir-tour" onClick={handleLinkClick}>Rajgir Tour</Link></li>
-                                <li><Link href="/packages/nalanda-tour" onClick={handleLinkClick}>Nalanda Tour</Link></li>
-                                <li><Link href="/packages/vaishali-tour" onClick={handleLinkClick}>Vaishali Tour</Link></li>
-                                <li><Link href="/packages/madhubani-tour" onClick={handleLinkClick}>Madhubani Tour</Link></li>
-                                <li><Link href="/packages/darbhanga-heritage-tour" onClick={handleLinkClick}>Darbhanga Heritage Tour</Link></li>
+                                <li><Link href="/routes/patna-to-anywhere-taxi" onClick={handleLinkClick}>Patna to Anywhere</Link></li>
+                                <li><Link href="/routes/darbhanga-to-anywhere-taxi" onClick={handleLinkClick}>Darbhanga to Anywhere</Link></li>
+                                <li><Link href="/routes/muzaffarpur-to-anywhere-taxi" onClick={handleLinkClick}>Muzaffarpur to Anywhere</Link></li>
+                                <li><Link href="/routes/patna-airport-to-anywhere-taxi" onClick={handleLinkClick}>Patna Airport Pick Up</Link></li>
+                                <li><Link href="/routes/darbhanga-airport-to-anywhere-taxi" onClick={handleLinkClick}>Darbhanga Airport Pick Up</Link></li>
+                                <li><Link href="/routes/danapur-station-to-anywhere-taxi" onClick={handleLinkClick}>Danapur Station Pick Up</Link></li>
+                                <li><Link href="/routes/patna-station-to-anywhere-taxi" onClick={handleLinkClick}>Patna Station Pick Up</Link></li>
                             </ul>
                         </li>
                     </ul>

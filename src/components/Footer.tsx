@@ -123,6 +123,13 @@ export default function Footer() {
                                         <li><Link href="/routes/darbhanga-to-patna-taxi">Darbhanga to Patna Taxi</Link></li>
                                         <li><Link href="/routes/danapur-to-patna-taxi">Danapur to Patna Taxi</Link></li>
                                         <li><Link href="/routes/danapur-to-darbhanga-taxi">Danapur to Darbhanga Taxi</Link></li>
+                                        <li><Link href="/routes/patna-to-anywhere-taxi">Patna to Anywhere Taxi</Link></li>
+                                        <li><Link href="/routes/darbhanga-to-anywhere-taxi">Darbhanga to Anywhere Taxi</Link></li>
+                                        <li><Link href="/routes/muzaffarpur-to-anywhere-taxi">Muzaffarpur to Anywhere Taxi</Link></li>
+                                        <li><Link href="/routes/patna-airport-to-anywhere-taxi">Patna Airport to Anywhere</Link></li>
+                                        <li><Link href="/routes/darbhanga-airport-to-anywhere-taxi">Darbhanga Airport to Anywhere</Link></li>
+                                        <li><Link href="/routes/danapur-station-to-anywhere-taxi">Danapur Station to Anywhere</Link></li>
+                                        <li><Link href="/routes/patna-station-to-anywhere-taxi">Patna Station to Anywhere</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -144,21 +151,22 @@ export default function Footer() {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-lg-3 col-sm-6 d-flex justify-content-lg-end">
-                                <div className="footer-widget">
-                                    <div className="widget-title">
-                                        <h5>Tour Packages</h5>
-                                    </div>
-                                    <ul className="widget-list">
-                                        <li><Link href="/packages/bodh-gaya-tour">Bodh Gaya Tour</Link></li>
-                                        <li><Link href="/packages/rajgir-tour">Rajgir Tour</Link></li>
-                                        <li><Link href="/packages/nalanda-tour">Nalanda Tour</Link></li>
-                                        <li><Link href="/packages/vaishali-tour">Vaishali Tour</Link></li>
-                                        <li><Link href="/packages/madhubani-tour">Madhubani Tour</Link></li>
-                                        <li><Link href="/packages/darbhanga-heritage-tour">Darbhanga Heritage Tour</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
+                             <div className="col-lg-3 col-sm-6 d-flex justify-content-lg-end">
+                                 <div className="footer-widget">
+                                     <div className="widget-title">
+                                         <h5>Quick Booking</h5>
+                                     </div>
+                                     <ul className="widget-list">
+                                         <li><Link href="/routes/patna-to-anywhere-taxi">Patna to Anywhere</Link></li>
+                                         <li><Link href="/routes/darbhanga-to-anywhere-taxi">Darbhanga to Anywhere</Link></li>
+                                         <li><Link href="/routes/muzaffarpur-to-anywhere-taxi">Muzaffarpur to Anywhere</Link></li>
+                                         <li><Link href="/routes/patna-airport-to-anywhere-taxi">Patna Airport Pick Up</Link></li>
+                                         <li><Link href="/routes/darbhanga-airport-to-anywhere-taxi">Darbhanga Airport Pick Up</Link></li>
+                                         <li><Link href="/routes/danapur-station-to-anywhere-taxi">Danapur Station Pick Up</Link></li>
+                                         <li><Link href="/routes/patna-station-to-anywhere-taxi">Patna Station Pick Up</Link></li>
+                                     </ul>
+                                 </div>
+                             </div>
                         </div>
                     </div>
                 </div>
