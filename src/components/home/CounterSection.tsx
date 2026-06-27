@@ -1,5 +1,57 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { counters } from '@/data/homeData';
+
+function AnimateCounter({ targetNumber }: { targetNumber: number }) {
+  const [count, setCount] = useState(0);
+  const elementRef = useRef<HTMLHeadingElement | null>(null);
+
+  useEffect(() => {
+    let active = true;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && active) {
+          let start = 0;
+          const end = targetNumber;
+          if (start === end) {
+            setCount(end);
+            return;
+          }
+          const totalDuration = 1500;
+          const stepTime = Math.max(Math.floor(totalDuration / end), 25);
+          const increment = Math.max(Math.floor(end / (totalDuration / stepTime)), 1);
+
+          const timer = setInterval(() => {
+            start += increment;
+            if (start >= end) {
+              setCount(end);
+              clearInterval(timer);
+            } else {
+              setCount(start);
+            }
+          }, stepTime);
+
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => {
+      active = false;
+      observer.disconnect();
+    };
+  }, [targetNumber]);
+
+  return (
+    <h2 className="counter" ref={elementRef}>
+      {count}
+    </h2>
+  );
+}
 
 export default function CounterSection() {
   const getColClass = (index: number) => {
@@ -14,13 +66,14 @@ export default function CounterSection() {
         <div className="row gy-md-5 gy-4">
           {counters.map((counter, index) => {
             const iconClass = `icon ${counter.iconColor !== 'default' ? counter.iconColor : ''}`.trim();
+            const target = parseInt(counter.number, 10) || 0;
             return (
               <div className={getColClass(index)} key={counter.id}>
                 <div className="single-counter">
                   <div className={iconClass} dangerouslySetInnerHTML={{ __html: counter.iconSvg }} />
                   <div className="content">
                     <div className="number">
-                      <h2 className="counter">{counter.number}</h2>
+                      <AnimateCounter targetNumber={target} />
                       <span>{counter.suffix}</span>
                     </div>
                     <span>{counter.title}</span>

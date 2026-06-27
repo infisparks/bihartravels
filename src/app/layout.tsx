@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import "../../public/css/bootstrap.min.css";
+import "../../public/css/bootstrap-icons.css";
+import "../../public/css/animate.min.css";
+import "../../public/css/swiper-bundle.min.css";
+import "../../public/css/boxicons.min.css";
+import "../../public/css/style.css";
 
 const SITE_URL = "https://www.taxiservicebihar.com";
 const THUMBNAIL = "https://raw.githubusercontent.com/infisparks/images/refs/heads/main/bihartravel/thumbnail.png";
@@ -43,17 +49,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link href="/css/bootstrap.min.css" rel="stylesheet" />
-        <link href="/css/jquery-ui.css" rel="stylesheet" />
-        <link href="/css/bootstrap-icons.css" rel="stylesheet" />
-        <link href="/css/animate.min.css" rel="stylesheet" />
-        <link href="/css/jquery.fancybox.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="/css/slick.css" />
-        <link rel="stylesheet" href="/css/slick-theme.css" />
-        <link rel="stylesheet" href="/css/daterangepicker.css" />
-        <link href="/css/boxicons.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Courgette&display=swap" 
+          rel="stylesheet" 
+        />
       </head>
       <body className="tt-magic-cursor">
         {/* Google tag (gtag.js) */}
@@ -77,20 +78,14 @@ export default function RootLayout({
         {children}
 
         {/* Scripts */}
-        <Script src="/js/jquery-3.7.1.min.js" strategy="beforeInteractive" />
-        <Script src="/js/jquery-ui.js" strategy="beforeInteractive" />
-        <Script src="/js/moment.min.js" strategy="beforeInteractive" />
-        <Script src="/js/daterangepicker.min.js" strategy="beforeInteractive" />
-        <Script src="/js/bootstrap.min.js" strategy="beforeInteractive" />
-        <Script src="/js/popper.min.js" strategy="beforeInteractive" />
-        <Script src="/js/swiper-bundle.min.js" strategy="beforeInteractive" />
-        <Script src="/js/slick.js" strategy="beforeInteractive" />
-        <Script src="/js/waypoints.min.js" strategy="beforeInteractive" />
-        <Script src="/js/jquery.counterup.min.js" strategy="beforeInteractive" />
-        <Script src="/js/wow.min.js" strategy="beforeInteractive" />
-        <Script src="/js/gsap.min.js" strategy="beforeInteractive" />
-        <Script src="/js/ScrollTrigger.min.js" strategy="beforeInteractive" />
-        <Script src="/js/jquery.fancybox.min.js" strategy="beforeInteractive" />
+        <Script src="/js/jquery-3.7.1.min.js" strategy="afterInteractive" />
+        <Script src="/js/bootstrap.min.js" strategy="lazyOnload" />
+        <Script src="/js/popper.min.js" strategy="lazyOnload" />
+        <Script src="/js/swiper-bundle.min.js" strategy="afterInteractive" />
+        <Script src="/js/wow.min.js" strategy="lazyOnload" />
+        <Script src="/js/gsap.min.js" strategy="lazyOnload" />
+        <Script src="/js/ScrollTrigger.min.js" strategy="lazyOnload" />
+        <Script src="/js/jquery.fancybox.min.js" strategy="lazyOnload" />
         <Script src="/js/select-dropdown.js" strategy="lazyOnload" />
         <Script src="/js/custom.js" strategy="lazyOnload" />
       </body>

@@ -1,6 +1,8 @@
 import React from 'react';
 import { PackageData } from '@/data/homeData';
 import { trackConversion } from '@/utils/gtag';
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface PackageCardProps {
   packageData: PackageData;
@@ -18,9 +20,15 @@ export default function PackageCard({ packageData }: PackageCardProps) {
               <div className="swiper-wrapper">
                 {packageData.images.map((img, index) => (
                   <div className="swiper-slide" key={index}>
-                    <a href={packageData.detailsLink} className="package-img">
-                      <img src={img} alt={packageData.title} />
-                    </a>
+                    <Link href={packageData.detailsLink} className="package-img" style={{ display: 'block', position: 'relative', width: '100%', height: '240px' }}>
+                      <Image
+                        src={img}
+                        alt={packageData.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </Link>
                   </div>
                 ))}
               </div>
@@ -30,9 +38,15 @@ export default function PackageCard({ packageData }: PackageCardProps) {
             </div>
           </>
         ) : (
-          <a href={packageData.detailsLink} className="package-img">
-            <img src={packageData.images[0]} alt={packageData.title} />
-          </a>
+          <Link href={packageData.detailsLink} className="package-img" style={{ display: 'block', position: 'relative', width: '100%', height: '240px' }}>
+            <Image
+              src={packageData.images[0]}
+              alt={packageData.title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              style={{ objectFit: 'cover' }}
+            />
+          </Link>
         )}
         
         {packageData.badge && (

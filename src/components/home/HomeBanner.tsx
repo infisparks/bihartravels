@@ -1,5 +1,6 @@
 import React from 'react';
 import { bannerSlides } from '@/data/homeData';
+import Image from 'next/image';
 
 export default function HomeBanner() {
   return (
@@ -22,8 +23,15 @@ export default function HomeBanner() {
                     ></video>
                   </div>
                 ) : (
-                  <div className="banner-img-area">
-                    <img src={slide.src} alt="" />
+                  <div className="banner-img-area" style={{ position: 'relative', width: '100%', height: '100%' }}>
+                    <Image
+                      src={slide.src}
+                      alt={slide.title}
+                      fill
+                      priority={slide.id === 2}
+                      sizes="100vw"
+                      style={{ objectFit: 'cover' }}
+                    />
                   </div>
                 )}
                 <div className="banner-content-wrap">

@@ -1,4 +1,14 @@
 /* globals.css - reset default Next.js styles */
+
+:root {
+  --font-poppins: "Poppins", sans-serif !important;
+  --font-roboto: "Roboto", sans-serif !important;
+}
+
+body, input, select, textarea, button {
+  font-family: var(--font-poppins) !important;
+}
+
 @layer base {
   body {
     padding: 0;
@@ -75,4 +85,36 @@
 
 .filter-wrapper .filter-input-wrap .filter-input .single-search-box {
   overflow: visible !important;
+}
+
+/* Custom responsive grid for the booking form with separate pickup/drop */
+.filter-wrapper .filter-input-wrap .react-filter-input {
+  display: none;
+  gap: 16px;
+  align-items: center;
+  overflow: visible !important;
+}
+.filter-wrapper .filter-input-wrap .react-filter-input.show {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+}
+
+@media (max-width: 1199px) {
+  .filter-wrapper .filter-input-wrap .react-filter-input.show {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .filter-wrapper .filter-input-wrap .react-filter-input.show button {
+    grid-column: span 2;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .filter-wrapper .filter-input-wrap .react-filter-input.show {
+    grid-template-columns: 1fr;
+  }
+  .filter-wrapper .filter-input-wrap .react-filter-input.show button {
+    grid-column: span 1;
+    width: 100%;
+  }
 }

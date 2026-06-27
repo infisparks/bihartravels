@@ -107,10 +107,12 @@
   });
 
   //Counter up
-  $(".counter").counterUp({
-    delay: 10,
-    time: 1000,
-  });
+  if ($.fn.counterUp) {
+    $(".counter").counterUp({
+      delay: 10,
+      time: 1000,
+    });
+  }
 
   // Home1 Offer Slider
   var swiper = new Swiper(".home1-offer-slider", {

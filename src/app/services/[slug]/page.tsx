@@ -20,6 +20,30 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: data.title,
     description: data.metaDescription,
+    alternates: {
+      canonical: `https://www.taxiservicebihar.com/services/${slug}`,
+    },
+    openGraph: {
+      type: "website",
+      url: `https://www.taxiservicebihar.com/services/${slug}`,
+      title: data.title,
+      description: data.metaDescription,
+      siteName: "Taxi Service Bihar",
+      images: [
+        {
+          url: "https://raw.githubusercontent.com/infisparks/images/refs/heads/main/bihartravel/thumbnail.png",
+          width: 1200,
+          height: 630,
+          alt: data.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: data.title,
+      description: data.metaDescription,
+      images: ["https://raw.githubusercontent.com/infisparks/images/refs/heads/main/bihartravel/thumbnail.png"],
+    },
   };
 }
 

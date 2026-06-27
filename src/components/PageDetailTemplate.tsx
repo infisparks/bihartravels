@@ -5,6 +5,8 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { trackConversion } from '@/utils/gtag';
 import { PageDetailData } from '@/data/pagesData';
+import Image from 'next/image';
+import "../../public/css/jquery.fancybox.min.css";
 
 interface PageDetailTemplateProps {
   data: PageDetailData;
@@ -24,7 +26,14 @@ export default function PageDetailTemplate({ data }: PageDetailTemplateProps) {
         <div className="home2-banner-section" style={{ height: '480px', position: 'relative', overflow: 'hidden' }}>
           <div className="banner-wrapper" style={{ height: '100%' }}>
             <div className="banner-img-area" style={{ height: '100%', position: 'absolute', width: '100%', top: 0, left: 0 }}>
-              <img src={data.galleryImages[0] || "/images/bihar-cab-highway.png"} alt={data.heading} style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.5)' }} />
+              <Image
+                src={data.galleryImages[0] || "/images/bihar-cab-highway.png"}
+                alt={data.heading}
+                fill
+                priority
+                sizes="100vw"
+                style={{ objectFit: 'cover', filter: 'brightness(0.5)' }}
+              />
             </div>
             <div className="banner-content-wrap" style={{ position: 'relative', zIndex: 5, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', background: 'rgba(0, 0, 0, 0.45)' }}>
               <div className="container">
@@ -133,7 +142,15 @@ export default function PageDetailTemplate({ data }: PageDetailTemplateProps) {
                 ].map((car, idx) => (
                   <div className="col-lg-4 col-md-6" key={idx}>
                     <div className="why-choose-card" style={{ padding: '0', overflow: 'hidden', border: '1px solid #E5E7EB', borderRadius: '12px', background: '#FFFFFF', transition: 'all 0.3s ease' }}>
-                      <img src={car.img} alt={car.name} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                      <div style={{ position: 'relative', width: '100%', height: '200px' }}>
+                        <Image
+                          src={car.img}
+                          alt={car.name}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          style={{ objectFit: 'cover' }}
+                        />
+                      </div>
                       <div style={{ padding: '20px' }}>
                         <h4 style={{ fontSize: '18px', fontWeight: 'bold', color: '#111827', marginBottom: '8px' }}>{car.name}</h4>
                         <span style={{ fontSize: '12px', color: '#6B7280', fontWeight: '500', display: 'block', marginBottom: '12px', borderBottom: '1px solid #E5E7EB', paddingBottom: '8px' }}>
@@ -164,7 +181,15 @@ export default function PageDetailTemplate({ data }: PageDetailTemplateProps) {
                     <div className="col-md-4" key={idx}>
                       <div className="location-card">
                         <div className="location-img">
-                          <img src={place.img} alt={place.name} style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
+                          <div style={{ position: 'relative', width: '100%', height: '240px' }}>
+                            <Image
+                              src={place.img}
+                              alt={place.name}
+                              fill
+                              sizes="(max-width: 768px) 100vw, 33vw"
+                              style={{ objectFit: 'cover' }}
+                            />
+                          </div>
                         </div>
                         <div className="location-content">
                           <h6>{place.name}</h6>
