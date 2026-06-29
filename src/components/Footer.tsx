@@ -1,4 +1,7 @@
+"use client";
+
 import Link from 'next/link';
+import { trackWhatsAppClick, trackCallClick } from '@/utils/gtag';
 
 export default function Footer() {
     return (
@@ -30,7 +33,7 @@ export default function Footer() {
                                 </div>
                                 <div className="content">
                                     <span>WhatsApp</span>
-                                    <a href="https://wa.me/918102550190?text=I%20want%20to%20book%20a%20taxi">+91 81025 50190</a>
+                                    <a href="https://wa.me/918102550190?text=I%20want%20to%20book%20a%20taxi" onClick={trackWhatsAppClick}>+91 81025 50190</a>
                                 </div>
                             </li>
                             <li className="single-contact">
@@ -48,7 +51,7 @@ export default function Footer() {
                                 </div>
                                 <div className="content">
                                     <span>Call Us</span>
-                                    <a href="tel:+918102550190">+91 81025 50190</a>
+                                    <a href="tel:+918102550190" onClick={trackCallClick}>+91 81025 50190</a>
                                 </div>
                             </li>
                         </ul>

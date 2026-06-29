@@ -59,7 +59,7 @@ export default function RootLayout({
       <body className="tt-magic-cursor">
         {/* Google tag (gtag.js) */}
         <Script 
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18221151440" 
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18220328304" 
           strategy="afterInteractive" 
         />
         <Script id="google-ads-tag" strategy="afterInteractive">
@@ -67,6 +67,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+            gtag('config', 'AW-18220328304');
             gtag('config', 'AW-18221151440');
           `}
         </Script>

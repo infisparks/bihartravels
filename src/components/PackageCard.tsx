@@ -1,6 +1,8 @@
+"use client";
+
 import React from 'react';
 import { PackageData } from '@/data/homeData';
-import { trackConversion } from '@/utils/gtag';
+import { trackWhatsAppClick } from '@/utils/gtag';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -77,7 +79,7 @@ export default function PackageCard({ packageData }: PackageCardProps) {
 
         <div className="btn-and-price-area">
           <a
-            onClick={trackConversion}
+            onClick={trackWhatsAppClick}
             href={`https://wa.me/918102550190?text=${encodeURIComponent(`Hello Taxi Service Bihar, I am interested in the "${packageData.title}" package. Please share details and availability.`)}`}
             className="primary-btn1"
             target="_blank"

@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { carTypes } from '@/data/homeData';
-import { trackConversion } from '@/utils/gtag';
+import { trackWhatsAppClick } from '@/utils/gtag';
 
 const biharPlaces = [
   // Major Cities & Districts
@@ -457,7 +457,7 @@ export default function HomeFilter() {
     const formattedDate = formatDateTime(owDate);
     const text = `Hello Taxi Service Bihar, I want to book a One-Way Taxi from ${owPickup} to ${owDrop} on Date: ${formattedDate} for Car Type: ${owCar}. Please confirm availability.`;
     const encodedText = encodeURIComponent(text);
-    trackConversion();
+    trackWhatsAppClick();
     window.open(`https://wa.me/918102550190?text=${encodedText}`, '_blank');
   };
 
@@ -467,7 +467,7 @@ export default function HomeFilter() {
     const formattedReturnDate = formatDateTime(rtReturnDate);
     const text = `Hello Taxi Service Bihar, I want to book a Round-Trip Taxi from ${rtPickup} to ${rtDrop} from Date: ${formattedDate} to ${formattedReturnDate} for Car Type: ${rtCar}. Please confirm availability.`;
     const encodedText = encodeURIComponent(text);
-    trackConversion();
+    trackWhatsAppClick();
     window.open(`https://wa.me/918102550190?text=${encodedText}`, '_blank');
   };
 
@@ -476,7 +476,7 @@ export default function HomeFilter() {
     const formattedDate = formatDateTime(apDate);
     const text = `Hello Taxi Service Bihar, I want to book an Airport Transfer (${apDirection}) for ${apAirport} on Date: ${formattedDate} for Car Type: ${apCar}. Please confirm availability.`;
     const encodedText = encodeURIComponent(text);
-    trackConversion();
+    trackWhatsAppClick();
     window.open(`https://wa.me/918102550190?text=${encodedText}`, '_blank');
   };
 
