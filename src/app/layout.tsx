@@ -78,11 +78,21 @@ export default function RootLayout({
               'phone_conversion_number': '+91 81025 50190'
             });
 
-            // If you want to configure phone tracking for the new AW-18220328304 tag,
-            // replace YOUR_NEW_CONVERSION_LABEL below with the label from your dashboard:
-            // gtag('config', 'AW-18220328304/YOUR_NEW_CONVERSION_LABEL', {
-            //   'phone_conversion_number': '+91 81025 50190'
-            // });
+            // Global conversion reporter for Click to call
+            window.gtag_report_conversion = function(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-18220328304/Bm-eCLag6cccEPDKkPBD',
+                  'value': 1.0,
+                  'currency': 'INR',
+                  'event_callback': callback
+              });
+              return false;
+            };
           `}
         </Script>
 

@@ -44,7 +44,7 @@ export const trackWhatsAppClick = () => {
 /**
  * Tracks a Phone Call click.
  */
-export const trackCallClick = () => {
+export const trackCallClick = (urlOrEvent?: any) => {
   if (typeof window !== "undefined" && (window as any).gtag) {
     try {
       // Send a custom event for Phone Call click
@@ -54,6 +54,19 @@ export const trackCallClick = () => {
         'value': 1
       });
       console.log('Call Click event sent successfully.');
+
+      // Also trigger the Google Ads conversion event for Click to Call (AW-18220328304/Bm-eCLag6cccEPDKkPBD)
+      const url = typeof urlOrEvent === 'string' ? urlOrEvent : undefined;
+      if ((window as any).gtag_report_conversion) {
+        (window as any).gtag_report_conversion(url);
+      } else {
+        (window as any).gtag('event', 'conversion', {
+          'send_to': 'AW-18220328304/Bm-eCLag6cccEPDKkPBD',
+          'value': 1.0,
+          'currency': 'INR'
+        });
+      }
+      console.log('Google Ads Call Conversion event sent successfully.');
     } catch (error) {
       console.error('Failed to track Call click:', error);
     }
