@@ -67,8 +67,22 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+            
+            // Base configs
             gtag('config', 'AW-18220328304');
             gtag('config', 'AW-18221151440');
+
+            // Phone tracking config:
+            // Using the known conversion label for AW-18221151440 (9aYZCOW007ocENDpwvBD)
+            gtag('config', 'AW-18221151440/9aYZCOW007ocENDpwvBD', {
+              'phone_conversion_number': '+91 81025 50190'
+            });
+
+            // If you want to configure phone tracking for the new AW-18220328304 tag,
+            // replace YOUR_NEW_CONVERSION_LABEL below with the label from your dashboard:
+            // gtag('config', 'AW-18220328304/YOUR_NEW_CONVERSION_LABEL', {
+            //   'phone_conversion_number': '+91 81025 50190'
+            // });
           `}
         </Script>
 
