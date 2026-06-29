@@ -71,6 +71,7 @@ export default function RootLayout({
             // Base configs
             gtag('config', 'AW-18220328304');
             gtag('config', 'AW-18221151440');
+            gtag('config', 'AW-7666815030');
 
             // Phone tracking config:
             // Using the known conversion label for AW-18221151440 (9aYZCOW007ocENDpwvBD)
@@ -85,8 +86,15 @@ export default function RootLayout({
                   window.location = url;
                 }
               };
+              // Track Click to call (2)
               gtag('event', 'conversion', {
-                  'send_to': 'AW-18220328304/Bm-eCLag6cccEPDKkPBD',
+                  'send_to': 'AW-18220328304/d7fWCPLR68ccEPDKkPBD',
+                  'value': 1.0,
+                  'currency': 'INR'
+              });
+              // Track Click to call (1)
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-7666815030/Bm-eCLag6cccEPDKkPBD',
                   'value': 1.0,
                   'currency': 'INR',
                   'event_callback': callback

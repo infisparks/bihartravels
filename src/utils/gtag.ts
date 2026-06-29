@@ -55,18 +55,25 @@ export const trackCallClick = (urlOrEvent?: any) => {
       });
       console.log('Call Click event sent successfully.');
 
-      // Also trigger the Google Ads conversion event for Click to Call (AW-18220328304/Bm-eCLag6cccEPDKkPBD)
+      // Also trigger the Google Ads conversion events for Click to Call (1) and (2)
       const url = typeof urlOrEvent === 'string' ? urlOrEvent : undefined;
       if ((window as any).gtag_report_conversion) {
         (window as any).gtag_report_conversion(url);
       } else {
+        // Fallback for Click to call (2)
         (window as any).gtag('event', 'conversion', {
-          'send_to': 'AW-18220328304/Bm-eCLag6cccEPDKkPBD',
+          'send_to': 'AW-18220328304/d7fWCPLR68ccEPDKkPBD',
+          'value': 1.0,
+          'currency': 'INR'
+        });
+        // Fallback for Click to call (1)
+        (window as any).gtag('event', 'conversion', {
+          'send_to': 'AW-7666815030/Bm-eCLag6cccEPDKkPBD',
           'value': 1.0,
           'currency': 'INR'
         });
       }
-      console.log('Google Ads Call Conversion event sent successfully.');
+      console.log('Google Ads Call Conversion events sent successfully.');
     } catch (error) {
       console.error('Failed to track Call click:', error);
     }
