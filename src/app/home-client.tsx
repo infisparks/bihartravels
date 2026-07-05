@@ -14,6 +14,7 @@ const OfferBanner = dynamic(() => import('@/components/home/OfferBanner'), { ssr
 const AwardBanner = dynamic(() => import('@/components/home/AwardBanner'), { ssr: false });
 const TestimonialSection = dynamic(() => import('@/components/home/TestimonialSection'), { ssr: false });
 const CounterSection = dynamic(() => import('@/components/home/CounterSection'), { ssr: false });
+const TrustAndBusinessInfo = dynamic(() => import('@/components/home/TrustAndBusinessInfo'), { ssr: false });
 
 export default function HomeClient() {
   return (
@@ -29,6 +30,7 @@ export default function HomeClient() {
         <AwardBanner />
         <TestimonialSection />
         <CounterSection />
+        <TrustAndBusinessInfo />
       </main>
       <Footer />
     </>

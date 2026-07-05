@@ -46,6 +46,68 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Taxi Service Bihar",
+    "url": "https://www.taxiservicebihar.com",
+    "logo": "https://www.taxiservicebihar.com/images/header-logo2.svg",
+    "founder": {
+      "@type": "Person",
+      "name": "Mohd Azim Ahmed Shaikh"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-81025-50190",
+      "contactType": "customer service",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Hindi"]
+    }
+  };
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Taxi Service Bihar",
+    "image": "https://raw.githubusercontent.com/infisparks/images/refs/heads/main/bihartravel/thumbnail.png",
+    "@id": "https://www.taxiservicebihar.com/#localbusiness",
+    "url": "https://www.taxiservicebihar.com",
+    "telephone": "+918102550190",
+    "email": "taxiservicepatnabihar@gmail.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Patna",
+      "addressLocality": "Patna",
+      "addressRegion": "Bihar",
+      "postalCode": "800001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 25.5941,
+      "longitude": 85.1376
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Bihar"
+    }
+  };
+
   return (
     <html lang="en">
       <head>
@@ -54,6 +116,14 @@ export default function RootLayout({
         <link 
           href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Courgette&display=swap" 
           rel="stylesheet" 
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
       <body className="tt-magic-cursor">

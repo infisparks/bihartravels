@@ -175,6 +175,56 @@ export default function Footer() {
                 </div>
                 <div className="footer-bottom">
                     <div className="container">
+                        {/* Business Information Section */}
+                        <div className="footer-business-info mb-4" style={{ borderBottom: '1px solid #292727', paddingBottom: '20px' }}>
+                            <div className="row gy-3">
+                                <div className="col-12">
+                                    <h5 style={{ color: 'var(--white-color)', marginBottom: '15px', fontFamily: 'var(--font-roboto)', fontWeight: 500 }}>Business Information</h5>
+                                </div>
+                                <div className="col-lg-3 col-sm-6">
+                                    <div style={{ color: 'var(--white-text-color)', fontSize: '14px', fontFamily: 'var(--font-poppins)' }}>
+                                        <strong style={{ color: 'var(--white-color)', display: 'block', marginBottom: '4px' }}>Brand Name:</strong>
+                                        Taxi Service Bihar
+                                    </div>
+                                </div>
+                                <div className="col-lg-3 col-sm-6">
+                                    <div style={{ color: 'var(--white-text-color)', fontSize: '14px', fontFamily: 'var(--font-poppins)' }}>
+                                        <strong style={{ color: 'var(--white-color)', display: 'block', marginBottom: '4px' }}>Owned & Operated By:</strong>
+                                        Mohd Azim Ahmed Shaikh
+                                    </div>
+                                </div>
+                                <div className="col-lg-3 col-sm-6">
+                                    <div style={{ color: 'var(--white-text-color)', fontSize: '14px', fontFamily: 'var(--font-poppins)' }}>
+                                        <strong style={{ color: 'var(--white-color)', display: 'block', marginBottom: '4px' }}>Business Type:</strong>
+                                        Individual / Sole Proprietor
+                                    </div>
+                                </div>
+                                <div className="col-lg-3 col-sm-6">
+                                    <div style={{ color: 'var(--white-text-color)', fontSize: '14px', fontFamily: 'var(--font-poppins)' }}>
+                                        <strong style={{ color: 'var(--white-color)', display: 'block', marginBottom: '4px' }}>Contact Details:</strong>
+                                        <span>Patna, Bihar, India</span><br/>
+                                        <a href="mailto:taxiservicepatnabihar@gmail.com" style={{ color: 'var(--white-text-color)' }}>taxiservicepatnabihar@gmail.com</a><br/>
+                                        <a href="tel:+918102550190" onClick={trackCallClick} style={{ color: 'var(--white-text-color)' }}>+91 81025 50190</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Legal Links section */}
+                        <div className="footer-legal-links mb-4 d-flex flex-wrap gap-3 justify-content-center justify-content-md-start" style={{ fontSize: '13px', fontFamily: 'var(--font-poppins)' }}>
+                            <Link href="/about-us" style={{ color: 'var(--white-text-color)' }}>About Us</Link>
+                            <span style={{ color: '#292727' }}>|</span>
+                            <Link href="/contact" style={{ color: 'var(--white-text-color)' }}>Contact Us</Link>
+                            <span style={{ color: '#292727' }}>|</span>
+                            <Link href="/privacy-policy" style={{ color: 'var(--white-text-color)' }}>Privacy Policy</Link>
+                            <span style={{ color: '#292727' }}>|</span>
+                            <Link href="/terms-and-conditions" style={{ color: 'var(--white-text-color)' }}>Terms & Conditions</Link>
+                            <span style={{ color: '#292727' }}>|</span>
+                            <Link href="/refund-policy" style={{ color: 'var(--white-text-color)' }}>Refund Policy</Link>
+                            <span style={{ color: '#292727' }}>|</span>
+                            <Link href="/cancellation-policy" style={{ color: 'var(--white-text-color)' }}>Cancellation Policy</Link>
+                        </div>
+
                         <div className="copyright-and-payment-method-area">
                             <p>Copyright 2026 <a href="https://infispark.in">Infispark</a> | All Right Reserved.</p>
                             <div className="payment-method-area">
