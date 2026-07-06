@@ -10,9 +10,12 @@ body, input, select, textarea, button {
 }
 
 @layer base {
+  html,
   body {
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 }
 
@@ -118,3 +121,107 @@ body, input, select, textarea, button {
     width: 100%;
   }
 }
+
+/* Highly highlighted Call Now button style matching website's blue theme (static for drawer) */
+.call-now-btn-highlight {
+  background: linear-gradient(135deg, #1781FE 0%, #0c62d0 100%);
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.call-now-btn-highlight:hover {
+  background: linear-gradient(135deg, #0c62d0 0%, #06459c 100%);
+  color: #ffffff !important;
+}
+
+.call-now-btn-highlight i {
+  font-size: 15px;
+}
+
+/* Floating Pulsing Call Now Button */
+.floating-call-btn {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #1781FE 0%, #0c62d0 100%);
+  color: #ffffff !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(23, 129, 254, 0.4);
+  z-index: 99999;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: pulse-glow-floating 1.8s infinite alternate;
+}
+
+.floating-call-btn:hover {
+  background: linear-gradient(135deg, #0c62d0 0%, #06459c 100%);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(23, 129, 254, 0.6);
+  color: #ffffff !important;
+}
+
+.floating-call-btn i {
+  font-size: 22px;
+  animation: wiggle 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow-floating {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(23, 129, 254, 0.4), 0 0 0 0 rgba(23, 129, 254, 0.4);
+  }
+  100% {
+    transform: scale(1.08);
+    box-shadow: 0 4px 15px rgba(23, 129, 254, 0.6), 0 0 0 10px rgba(23, 129, 254, 0);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg); }
+  75% { transform: rotate(15deg); }
+}
+
+@media (max-width: 576px) {
+  .call-now-btn-highlight {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  .floating-call-btn {
+    bottom: 16px;
+    left: 16px;
+    width: 50px;
+    height: 50px;
+  }
+  .floating-call-btn i {
+    font-size: 20px;
+  }
+}
+
+/* Center-align filter item labels when wrapped */
+.filter-wrapper .filter-item-list .single-item span {
+  text-align: center;
+  width: 100%;
+}
+
+
+
+

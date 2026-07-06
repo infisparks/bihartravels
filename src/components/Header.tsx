@@ -115,6 +115,10 @@ export default function Header() {
                             <a href="tel:+918102550190" onClick={trackCallClick}>+91 81025 50190</a>
                         </div>
                     </div>
+                    <a href="tel:+918102550190" onClick={trackCallClick} className="call-now-btn-highlight w-100 d-xl-none d-flex align-items-center justify-content-center mb-3">
+                        <i className="bi bi-telephone-fill"></i>
+                        <span>Call Now</span>
+                    </a>
                     <a onClick={trackWhatsAppClick} href="https://wa.me/918102550190?text=Hello%20Taxi%20Service%20Bihar%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" rel="noopener noreferrer" className="primary-btn1 black-bg d-xl-none d-flex">
                         <span>
                             <svg width="15" height="15" fill="currentColor" className="bi bi-whatsapp me-1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style={{ marginRight: '6px', verticalAlign: 'middle' }}>
@@ -226,7 +230,7 @@ export default function Header() {
                         <div className="swiper top-offer-text-slider">
                             <div className="swiper-wrapper">
                                 <div className="swiper-slide">
-                                    <a onClick={trackWhatsAppClick} href="https://wa.me/918102550190">24x7 Taxi Service in Patna, Darbhanga, Gaya & All Districts of Bihar. <strong>Call Now!</strong></a>
+                                    <a href="tel:+918102550190" onClick={trackCallClick}>Call & Get Instant Taxi All Over India. <strong>Call Now!</strong></a>
                                 </div>
                                 <div className="swiper-slide">
                                     <a onClick={trackWhatsAppClick} href="https://wa.me/918102550190">Reliable Airport Pickup & Drop. <strong>Book Instantly on WhatsApp</strong></a>
@@ -249,6 +253,10 @@ export default function Header() {
         </div>
     </div>
     
+    {/* Floating Pulsing Call Now Button */}
+    <a href="tel:+918102550190" onClick={trackCallClick} className="floating-call-btn" title="Call Now">
+        <i className="bi bi-telephone-fill"></i>
+    </a>
         </>
     );
 }
