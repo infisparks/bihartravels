@@ -80,7 +80,7 @@ export default function PackageCard({ packageData }: PackageCardProps) {
         <div className="btn-and-price-area">
           <a
             onClick={trackWhatsAppClick}
-            href={`https://wa.me/918102550190?text=${encodeURIComponent(`Hello Taxi Service Bihar, I am interested in the "${packageData.title}" package. Please share details and availability.`)}`}
+            href={`https://wa.me/919262550190?text=${encodeURIComponent(`Hello Taxi Service Bihar, I am interested in the "${packageData.title}" package. Please share details and availability.`)}`}
             className="primary-btn1"
             target="_blank"
             rel="noopener noreferrer"

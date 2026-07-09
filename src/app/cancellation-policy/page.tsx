@@ -38,7 +38,7 @@ export default function Page() {
 
         <h3 style={{ fontSize: '18px', fontWeight: '600', marginTop: '30px', marginBottom: '12px', color: '#111827' }}>3. How to Cancel</h3>
         <p style={{ fontSize: '15px', color: '#4B5563', marginBottom: '24px' }}>
-          To request a cancellation, please call us directly or message our support team on WhatsApp at <a href="tel:+918102550190" style={{ color: '#4F46E5', fontWeight: '600' }}>+91 81025 50190</a>. Make sure to provide your booking name and trip details.
+          To request a cancellation, please call us directly or message our support team on WhatsApp at <a href="tel:+919262550190" style={{ color: '#4F46E5', fontWeight: '600' }}>+91 92625 50190</a>. Make sure to provide your booking name and trip details.
         </p>
 
         <h3 style={{ fontSize: '18px', fontWeight: '600', marginTop: '30px', marginBottom: '12px', color: '#111827' }}>4. Contact Information</h3>
@@ -48,7 +48,7 @@ export default function Page() {
         <ul style={{ fontSize: '15px', color: '#4B5563', marginBottom: '0', paddingLeft: '20px', listStyleType: 'none' }}>
           <li><strong>Owner Name:</strong> Mohd Azim Ahmed Shaikh</li>
           <li><strong>Contact Email:</strong> <a href="mailto:taxiservicepatnabihar@gmail.com" style={{ color: '#4F46E5' }}>taxiservicepatnabihar@gmail.com</a></li>
-          <li><strong>Contact Number:</strong> <a href="tel:+918102550190" style={{ color: '#4F46E5' }}>+91 81025 50190</a></li>
+          <li><strong>Contact Number:</strong> <a href="tel:+919262550190" style={{ color: '#4F46E5' }}>+91 92625 50190</a></li>
         </ul>
       </div>
     </LegalPageLayout>

@@ -49,8 +49,8 @@ export default function Page() {
               <tr>
                 <td className="p-3 text-muted" style={{ fontWeight: '500' }}>Phone / WhatsApp</td>
                 <td className="p-3">
-                  <a href="tel:+918102550190" style={{ color: '#4F46E5', fontWeight: '600' }}>
-                    +91 81025 50190
+                  <a href="tel:+919262550190" style={{ color: '#4F46E5', fontWeight: '600' }}>
+                    +91 92625 50190
                   </a>
                 </td>
               </tr>
@@ -60,10 +60,10 @@ export default function Page() {
 
         {/* Call to actions */}
         <div className="d-flex flex-wrap gap-3 mt-4">
-          <a href="tel:+918102550190" className="primary-btn1" style={{ textDecoration: 'none' }}>
-            <span>Call: +91 81025 50190</span>
+          <a href="tel:+919262550190" className="primary-btn1" style={{ textDecoration: 'none' }}>
+            <span>Call: +91 92625 50190</span>
           </a>
-          <a href="https://wa.me/918102550190?text=Hello%20Taxi%20Service%20Bihar%2C%20I%20want%20to%20book%20a%20taxi." className="primary-btn1 two black-bg" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+          <a href="https://wa.me/919262550190?text=Hello%20Taxi%20Service%20Bihar%2C%20I%20want%20to%20book%20a%20taxi." className="primary-btn1 two black-bg" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
             <span>WhatsApp Booking</span>
           </a>
         </div>

@@ -112,14 +112,14 @@ export default function Header() {
                         </div>
                         <div className="content">
                             <span>Need Help?</span>
-                            <a href="tel:+918102550190" onClick={trackCallClick}>+91 81025 50190</a>
+                            <a href="tel:+919262550190" onClick={trackCallClick}>+91 92625 50190</a>
                         </div>
                     </div>
-                    <a href="tel:+918102550190" onClick={trackCallClick} className="call-now-btn-highlight w-100 d-xl-none d-flex align-items-center justify-content-center mb-3">
+                    <a href="tel:+919262550190" onClick={trackCallClick} className="call-now-btn-highlight w-100 d-xl-none d-flex align-items-center justify-content-center mb-3">
                         <i className="bi bi-telephone-fill"></i>
                         <span>Call Now</span>
                     </a>
-                    <a onClick={trackWhatsAppClick} href="https://wa.me/918102550190?text=Hello%20Taxi%20Service%20Bihar%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" rel="noopener noreferrer" className="primary-btn1 black-bg d-xl-none d-flex">
+                    <a onClick={trackWhatsAppClick} href="https://wa.me/919262550190?text=Hello%20Taxi%20Service%20Bihar%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" rel="noopener noreferrer" className="primary-btn1 black-bg d-xl-none d-flex">
                         <span>
                             <svg width="15" height="15" fill="currentColor" className="bi bi-whatsapp me-1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style={{ marginRight: '6px', verticalAlign: 'middle' }}>
                                 <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79 1.01h.007c4.368 0 7.927-3.558 7.93-7.93a7.897 7.897 0 0 0-2.33-5.593l.04-.025zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.69-4.203c-.2-.1-.1.201-.299.1-.599-.3-1.04-.74-1.34-1.34-.1-.2.05-.3.15-.4l.45-.45c.1-.1.1-.2 0-.3L9.344 6.07c-.1-.1-.2-.1-.3 0l-.5.5c-.1.1-.15.25-.1.35.3.9 1.1 2.2 2.1 2.8.1.05.25.05.35-.05l.5-.5c.1-.1.2-.1.3 0l2.3 2.1c.1.1.1.2 0 .3l-.45.45c-.1.1-.25.15-.35.1z"/>
@@ -149,7 +149,7 @@ export default function Header() {
                         </div>
                         <div className="content">
                             <span>Need Help?</span>
-                            <a href="tel:+918102550190" onClick={trackCallClick}>+91 81025 50190</a>
+                            <a href="tel:+919262550190" onClick={trackCallClick}>+91 92625 50190</a>
                         </div>
                     </div>
                     <div className="search-bar">
@@ -174,18 +174,18 @@ export default function Header() {
                                 <div className="quick-search">
                                     <ul>
                                         <li>Quick Book :</li>
-                                        <li><a onClick={trackWhatsAppClick} href="https://wa.me/918102550190?text=Book%20Patna%20to%20Darbhanga%20Taxi">Patna to Darbhanga,</a></li>
-                                        <li><a onClick={trackWhatsAppClick} href="https://wa.me/918102550190?text=Book%20Patna%20to%20Muzaffarpur%20Taxi">Patna to Muzaffarpur,</a></li>
-                                        <li><a onClick={trackWhatsAppClick} href="https://wa.me/918102550190?text=Book%20Patna%20to%20Gaya%20Taxi">Patna to Gaya,</a></li>
-                                        <li><a onClick={trackWhatsAppClick} href="https://wa.me/918102550190?text=Book%20Danapur%20to%20Patna%20Taxi">Danapur to Patna,</a></li>
-                                        <li><a onClick={trackWhatsAppClick} href="https://wa.me/918102550190?text=Book%20Danapur%20to%20Darbhanga%20Taxi">Danapur to Darbhanga</a></li>
+                                        <li><a onClick={trackWhatsAppClick} href="https://wa.me/919262550190?text=Book%20Patna%20to%20Darbhanga%20Taxi">Patna to Darbhanga,</a></li>
+                                        <li><a onClick={trackWhatsAppClick} href="https://wa.me/919262550190?text=Book%20Patna%20to%20Muzaffarpur%20Taxi">Patna to Muzaffarpur,</a></li>
+                                        <li><a onClick={trackWhatsAppClick} href="https://wa.me/919262550190?text=Book%20Patna%20to%20Gaya%20Taxi">Patna to Gaya,</a></li>
+                                        <li><a onClick={trackWhatsAppClick} href="https://wa.me/919262550190?text=Book%20Danapur%20to%20Patna%20Taxi">Danapur to Patna,</a></li>
+                                        <li><a onClick={trackWhatsAppClick} href="https://wa.me/919262550190?text=Book%20Danapur%20to%20Darbhanga%20Taxi">Danapur to Darbhanga</a></li>
                                     </ul>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <a onClick={trackWhatsAppClick} href="https://wa.me/918102550190?text=Hello%20Taxi%20Service%20Bihar%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" rel="noopener noreferrer" className="primary-btn1 black-bg d-xl-flex d-none">
+                <a onClick={trackWhatsAppClick} href="https://wa.me/919262550190?text=Hello%20Taxi%20Service%20Bihar%2C%20I%20want%20to%20book%20a%20taxi." target="_blank" rel="noopener noreferrer" className="primary-btn1 black-bg d-xl-flex d-none">
                     <span>
                         <svg width="15" height="15" fill="currentColor" className="bi bi-whatsapp me-1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" style={{ marginRight: '6px', verticalAlign: 'middle' }}>
                             <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79 1.01h.007c4.368 0 7.927-3.558 7.93-7.93a7.897 7.897 0 0 0-2.33-5.593l.04-.025zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.69-4.203c-.2-.1-.1.201-.299.1-.599-.3-1.04-.74-1.34-1.34-.1-.2.05-.3.15-.4l.45-.45c.1-.1.1-.2 0-.3L9.344 6.07c-.1-.1-.2-.1-.3 0l-.5.5c-.1.1-.15.25-.1.35.3.9 1.1 2.2 2.1 2.8.1.05.25.05.35-.05l.5-.5c.1-.1.2-.1.3 0l2.3 2.1c.1.1.1.2 0 .3l-.45.45c-.1.1-.25.15-.35.1z"/>
@@ -230,13 +230,13 @@ export default function Header() {
                         <div className="swiper top-offer-text-slider">
                             <div className="swiper-wrapper">
                                 <div className="swiper-slide">
-                                    <a href="tel:+918102550190" onClick={trackCallClick}>Call & Get Instant Taxi All Over India. <strong>Call Now!</strong></a>
+                                    <a href="tel:+919262550190" onClick={trackCallClick}>Call & Get Instant Taxi All Over India. <strong>Call Now!</strong></a>
                                 </div>
                                 <div className="swiper-slide">
-                                    <a onClick={trackWhatsAppClick} href="https://wa.me/918102550190">Reliable Airport Pickup & Drop. <strong>Book Instantly on WhatsApp</strong></a>
+                                    <a onClick={trackWhatsAppClick} href="https://wa.me/919262550190">Reliable Airport Pickup & Drop. <strong>Book Instantly on WhatsApp</strong></a>
                                 </div>
                                 <div className="swiper-slide">
-                                    <a onClick={trackWhatsAppClick} href="https://wa.me/918102550190">Affordable One-Way & Round-Trip Fares with <strong>Verified Drivers</strong></a>
+                                    <a onClick={trackWhatsAppClick} href="https://wa.me/919262550190">Affordable One-Way & Round-Trip Fares with <strong>Verified Drivers</strong></a>
                                 </div>
                             </div>
                         </div>
@@ -254,7 +254,7 @@ export default function Header() {
     </div>
     
     {/* Floating Pulsing Call Now Button */}
-    <a href="tel:+918102550190" onClick={trackCallClick} className="floating-call-btn" title="Call Now">
+    <a href="tel:+919262550190" onClick={trackCallClick} className="floating-call-btn" title="Call Now">
         <i className="bi bi-telephone-fill"></i>
     </a>
         </>

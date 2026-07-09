@@ -15,7 +15,7 @@ interface PageDetailTemplateProps {
 export default function PageDetailTemplate({ data }: PageDetailTemplateProps) {
   // WhatsApp link generator
   const getWhatsAppLink = (text: string) => {
-    return `https://wa.me/918102550190?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/919262550190?text=${encodeURIComponent(text)}`;
   };
 
   return (
@@ -45,8 +45,8 @@ export default function PageDetailTemplate({ data }: PageDetailTemplateProps) {
                     Safe, Fast & Affordable 24x7 Taxi Service in Bihar
                   </p>
                   <div className="banner-btn-group mt-30" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', justifyContent: 'center', marginTop: '30px' }}>
-                    <a href="tel:+918102550190" onClick={trackCallClick} className="primary-btn1">
-                      <span>Call: +91 81025 50190</span>
+                    <a href="tel:+919262550190" onClick={trackCallClick} className="primary-btn1">
+                      <span>Call: +91 92625 50190</span>
                     </a>
                     <a onClick={trackWhatsAppClick} href={getWhatsAppLink(`I want to book a taxi for: ${data.heading}`)} className="primary-btn1 two black-bg">
                       <span>Book on WhatsApp</span>
@@ -158,7 +158,7 @@ export default function PageDetailTemplate({ data }: PageDetailTemplateProps) {
                         </span>
                         <p style={{ fontSize: '14px', color: '#4B5563', lineHeight: '1.5', marginBottom: '18px', height: '70px', overflow: 'hidden' }}>{car.desc}</p>
                         <div style={{ display: 'flex', gap: '10px' }}>
-                          <a href="tel:+918102550190" onClick={trackCallClick} style={{ flex: '1', textAlign: 'center', background: '#4F46E5', color: '#FFFFFF', padding: '10px', borderRadius: '8px', fontSize: '14px', fontWeight: 'bold' }}>
+                          <a href="tel:+919262550190" onClick={trackCallClick} style={{ flex: '1', textAlign: 'center', background: '#4F46E5', color: '#FFFFFF', padding: '10px', borderRadius: '8px', fontSize: '14px', fontWeight: 'bold' }}>
                             Call for Price
                           </a>
                           <a onClick={trackWhatsAppClick} href={getWhatsAppLink(`I want to book: ${car.name} for ${data.heading}`)} style={{ flex: '1', textAlign: 'center', border: '1px solid #4F46E5', color: '#4F46E5', padding: '10px', borderRadius: '8px', fontSize: '14px', fontWeight: 'bold' }}>

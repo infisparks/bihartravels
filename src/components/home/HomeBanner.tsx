@@ -48,9 +48,9 @@ export default function HomeBanner() {
                       <p>{slide.description}</p>
                       <div className="banner-btn-group mt-30" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', justifyContent: 'center' }}>
                         <a href={slide.callLink} onClick={trackCallClick} className="primary-btn1">
-                          <span>Call: +91 81025 50190</span>
+                          <span>Call: +91 92625 50190</span>
                         </a>
-                        <a href={`https://wa.me/918102550190?text=${encodeURIComponent(slide.waText)}`} onClick={trackWhatsAppClick} className="primary-btn1 two black-bg">
+                        <a href={`https://wa.me/919262550190?text=${encodeURIComponent(slide.waText)}`} onClick={trackWhatsAppClick} className="primary-btn1 two black-bg">
                           <span>Book on WhatsApp</span>
                         </a>
                       </div>
