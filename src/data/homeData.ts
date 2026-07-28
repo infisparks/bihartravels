@@ -91,7 +91,7 @@ export const bannerSlides: BannerSlide[] = [
     src: 'https://infisparks.github.io/images/bihartravel/home2-banner-video.mp4',
     title: 'Call & Get Instant Taxi All Over India - Call Now!',
     description: 'Fast, Safe & Affordable Taxi Service Across Bihar. Patna Airport Pickup, Railway Station drop, Outstation, One-Way, Round-Trip Taxi. 2000+ Driver Network.',
-    callLink: 'tel:+919262550190',
+    callLink: 'tel:+918102550190',
     waText: 'I want to book a taxi in Bihar',
   },
   {
@@ -100,7 +100,7 @@ export const bannerSlides: BannerSlide[] = [
     src: '/images/banner-img1.jpg',
     title: 'Call & Get Instant Taxi All Over India - Call Now!',
     description: 'Travel comfortably from Patna to Darbhanga, Gaya, Muzaffarpur, Madhubani or any district in Bihar. Ertiga, Sedan, Innova Crysta & SUV options.',
-    callLink: 'tel:+919262550190',
+    callLink: 'tel:+918102550190',
     waText: 'I want to book a taxi in Bihar',
   },
   {
@@ -109,7 +109,7 @@ export const bannerSlides: BannerSlide[] = [
     src: '/images/banner-img2.jpg',
     title: 'Call & Get Instant Taxi All Over India - Call Now!',
     description: 'Reliable and timely airport pick & drop service. Pre-book your airport transfer with our professional local drivers at competitive rates.',
-    callLink: 'tel:+919262550190',
+    callLink: 'tel:+918102550190',
     waText: 'I want to book a taxi in Bihar',
   },
 ];

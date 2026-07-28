@@ -458,7 +458,7 @@ export default function HomeFilter() {
     const text = `Hello Taxi Service Bihar, I want to book a One-Way Taxi from ${owPickup} to ${owDrop} on Date: ${formattedDate} for Car Type: ${owCar}. Please confirm availability.`;
     const encodedText = encodeURIComponent(text);
     trackWhatsAppClick();
-    window.open(`https://wa.me/919262550190?text=${encodedText}`, '_blank');
+    window.open(`https://wa.me/918102550190?text=${encodedText}`, '_blank');
   };
 
   const handleSubmitRoundTrip = (e: React.FormEvent) => {
@@ -468,7 +468,7 @@ export default function HomeFilter() {
     const text = `Hello Taxi Service Bihar, I want to book a Round-Trip Taxi from ${rtPickup} to ${rtDrop} from Date: ${formattedDate} to ${formattedReturnDate} for Car Type: ${rtCar}. Please confirm availability.`;
     const encodedText = encodeURIComponent(text);
     trackWhatsAppClick();
-    window.open(`https://wa.me/919262550190?text=${encodedText}`, '_blank');
+    window.open(`https://wa.me/918102550190?text=${encodedText}`, '_blank');
   };
 
   const handleSubmitAirport = (e: React.FormEvent) => {
@@ -477,7 +477,7 @@ export default function HomeFilter() {
     const text = `Hello Taxi Service Bihar, I want to book an Airport Transfer (${apDirection}) for ${apAirport} on Date: ${formattedDate} for Car Type: ${apCar}. Please confirm availability.`;
     const encodedText = encodeURIComponent(text);
     trackWhatsAppClick();
-    window.open(`https://wa.me/919262550190?text=${encodedText}`, '_blank');
+    window.open(`https://wa.me/918102550190?text=${encodedText}`, '_blank');
   };
 
   // SVGs for Search Dropdowns

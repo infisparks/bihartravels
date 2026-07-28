@@ -35,7 +35,7 @@ export default function ServicesSection() {
               <span>Book Your Bihar Taxi Now!</span>
             </div>
             <div className="batch two">
-              <a href="https://wa.me/919262550190?text=Hello%20Taxi%20Service%20Bihar%2C%20I%20want%20to%20book%20a%20taxi." onClick={trackWhatsAppClick} target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/918102550190?text=Hello%20Taxi%20Service%20Bihar%2C%20I%20want%20to%20book%20a%20taxi." onClick={trackWhatsAppClick} target="_blank" rel="noopener noreferrer">
                 Book Now
                 <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round"></path>

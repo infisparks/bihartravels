@@ -82,7 +82,7 @@ export default function TrustAndBusinessInfo() {
                       <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-2">
                         <i className="bi bi-telephone-fill text-muted" style={{ fontSize: '18px' }}></i>
                         <span className="text-muted">Phone:</span>
-                        <a href="tel:+919262550190" onClick={trackCallClick} style={{ fontWeight: '600', color: '#4F46E5' }}>+91 92625 50190</a>
+                        <a href="tel:+918102550190" onClick={trackCallClick} style={{ fontWeight: '600', color: '#4F46E5' }}>+91 81025 50190</a>
                       </div>
                     </div>
                   </div>

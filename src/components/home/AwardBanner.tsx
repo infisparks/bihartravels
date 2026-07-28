@@ -26,7 +26,7 @@ export default function AwardBanner() {
           <h3>All Districts Covered</h3>
           <h2>BEST <span>CAB</span></h2>
           <span>Taxi Service Bihar</span>
-          <a href="https://wa.me/919262550190?text=Hello%20Taxi%20Service%20Bihar%2C%20I%20want%20to%20book%20a%20taxi." onClick={trackWhatsAppClick} target="_blank" rel="noopener noreferrer" className="primary-btn1 two">
+          <a href="https://wa.me/918102550190?text=Hello%20Taxi%20Service%20Bihar%2C%20I%20want%20to%20book%20a%20taxi." onClick={trackWhatsAppClick} target="_blank" rel="noopener noreferrer" className="primary-btn1 two">
             <span>
               Book Rides Now
               <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">

@@ -13,7 +13,7 @@ const THUMBNAIL = "https://raw.githubusercontent.com/infisparks/images/refs/head
 
 export const metadata: Metadata = {
   title: "Taxi Service Bihar – Your Journey, Our Priority!",
-  description: "Fast, safe & affordable taxi service across Bihar. 24x7 Patna Airport/Junction pickups, one-way taxi, outstation tour packages with 2000+ driver network. Book instantly via WhatsApp or Call +91 92625 50190.",
+  description: "Fast, safe & affordable taxi service across Bihar. 24x7 Patna Airport/Junction pickups, one-way taxi, outstation tour packages with 2000+ driver network. Book instantly via WhatsApp or Call +91 81025 50190.",
   metadataBase: new URL(SITE_URL),
   icons: {
     icon: "/images/fav-icon.svg",
@@ -58,7 +58,7 @@ export default function RootLayout({
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91-92625-50190",
+      "telephone": "+91-81025-50190",
       "contactType": "customer service",
       "areaServed": "IN",
       "availableLanguage": ["English", "Hindi"]
@@ -72,7 +72,7 @@ export default function RootLayout({
     "image": "https://raw.githubusercontent.com/infisparks/images/refs/heads/main/bihartravel/thumbnail.png",
     "@id": "https://www.taxiservicebihar.com/#localbusiness",
     "url": "https://www.taxiservicebihar.com",
-    "telephone": "+919262550190",
+    "telephone": "+918102550190",
     "email": "taxiservicepatnabihar@gmail.com",
     "priceRange": "$$",
     "address": {
@@ -165,7 +165,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             // Phone tracking config:
             // Using the known conversion label for AW-18221151440 (9aYZCOW007ocENDpwvBD)
             gtag('config', 'AW-18221151440/9aYZCOW007ocENDpwvBD', {
-              'phone_conversion_number': '+91 92625 50190'
+              'phone_conversion_number': '+91 81025 50190'
             });
 
             // Global conversion reporter for Click to call

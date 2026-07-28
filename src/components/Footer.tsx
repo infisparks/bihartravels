@@ -33,7 +33,7 @@ export default function Footer() {
                                 </div>
                                 <div className="content">
                                     <span>WhatsApp</span>
-                                    <a href="https://wa.me/919262550190?text=I%20want%20to%20book%20a%20taxi" onClick={trackWhatsAppClick}>+91 92625 50190</a>
+                                    <a href="https://wa.me/918102550190?text=I%20want%20to%20book%20a%20taxi" onClick={trackWhatsAppClick}>+91 81025 50190</a>
                                 </div>
                             </li>
                             <li className="single-contact">
@@ -51,7 +51,7 @@ export default function Footer() {
                                 </div>
                                 <div className="content">
                                     <span>Call Us</span>
-                                    <a href="tel:+919262550190" onClick={trackCallClick}>+91 92625 50190</a>
+                                    <a href="tel:+918102550190" onClick={trackCallClick}>+91 81025 50190</a>
                                 </div>
                             </li>
                         </ul>
@@ -204,7 +204,7 @@ export default function Footer() {
                                         <strong style={{ color: 'var(--white-color)', display: 'block', marginBottom: '4px' }}>Contact Details:</strong>
                                         <span>Patna, Bihar, India</span><br/>
                                         <a href="mailto:taxiservicepatnabihar@gmail.com" style={{ color: 'var(--white-text-color)' }}>taxiservicepatnabihar@gmail.com</a><br/>
-                                        <a href="tel:+919262550190" onClick={trackCallClick} style={{ color: 'var(--white-text-color)' }}>+91 92625 50190</a>
+                                        <a href="tel:+918102550190" onClick={trackCallClick} style={{ color: 'var(--white-text-color)' }}>+91 81025 50190</a>
                                     </div>
                                 </div>
                             </div>
